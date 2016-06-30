@@ -205,6 +205,7 @@ return(0);
 int mdatof(char* pt)     // convertie  chaine en double
 {
 int i,sign,deci,ll,mdec;
+int i,sign,ll,mdec;
 char c;
 double dd,vv;
 sign=1; deci=0; mdec=0; zsdoubl = 0; dd=0;

@@ -1,8 +1,8 @@
 
 TARGET = ./demogenfq
-DU = ../util/
+DU = ./util/
 SRC = $(TARGET).c  $(DU)genfq.c $(DU)genctrl.c $(DU)message.c 
-INC = ../util/ 
+INC = ./util/ 
 LIB = `pkg-config --libs --cflags gtk+-2.0 `
 all:
 #	gcc -o $(TARGET) $(SRC)  -I $(INC) $(LIB)
