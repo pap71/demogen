@@ -23,13 +23,13 @@
 
 //******************fenetre quelconque
 typedef struct  {	//def zones saisie
-int cox;
-int lyg;
+int cox;		// colonne
+int lyg;		// ligne
 int idcol;		// ident colonne (numéro)
-int deps;		 // deplacement dans structure
+int deps;		// deplacement dans structure
 GtkWidget *wdg;		// entry
 void *memcell;		// adresse absolue de memorisation de la variable
-int typ;		// type l (libelle pas de saisie) s char n numerique
+int typ;		// type de donnée
 int laf;		// longueur zone en caractere
 int (*fonc)();		// fonction utilisateur controle action
 char *forma;		// format affichage
