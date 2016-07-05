@@ -83,6 +83,10 @@ NULL,//GtkWidget *win;
 &boutpers	// fonction ajout de bouton
 };
 
+=== Fonction pour rajout dans la fenêtre (boutons)
+void boutpers(GtkWidget *widx, gpointer data)
+widx = GtkWidget de la fenêtre
+
 === activer la fenêtre
 crefenq ((FENQ*) &fen_pers, (void*) &pers);
 gtk_widget_show_all(fen_pers.win);
