@@ -1,0 +1,18 @@
+#!/bin/bash
+
+TARGET="demogenfq-tcc"
+DU="./util/"
+SRC='demogenfq.c ./util/genctrl.c ./util/message.c ./util/genfq.c '
+INC="./util/ "
+LIB=`pkg-config --libs --cflags gtk+-2.0 `
+
+# genere fic x00.o = dernier fic.c de SRC 
+# pour voir objdump -S x00.o > desas.txt
+	tcc  -g -r -o x00.o $SRC -I $INC $LIB -lm
+
+#	tcc  -r -o $TARGET.o $SRC -I $INC $LIB -lm
+#	tcc  -gb -o $TARGET $SRC -I $INC $LIB -lm
+
+	./$TARGET
+#	gdb ./$(TARGET)
+

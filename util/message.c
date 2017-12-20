@@ -1,11 +1,4 @@
-#include <gtk/gtk.h>
-//#include <string.h>
-//#include "genfen.h"
-
-typedef struct  {
-int num;
-char* messag;
-} S_MES;
+#include "genfen.h"
 
 static S_MES tlmes[] = {
 {0,"Enregistrement refusé erreur de saisie non corrigée"},

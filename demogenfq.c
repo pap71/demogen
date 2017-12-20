@@ -1,5 +1,4 @@
-#include <gtk/gtk.h>
-#include <string.h>
+//#!/usr/bin/tcc -run  -L.. -ltcc -ldl -l`pkg-config --libs --cflags gtk+-2.0`
 #include "genfen.h"
 
 void boutpers(GtkWidget *widx, gpointer data);

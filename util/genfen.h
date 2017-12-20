@@ -1,4 +1,7 @@
+#include <gtk/gtk.h>
+#include <string.h>
 #include <stdlib.h>
+//#include <tcclib.h>
 
 #ifdef WIN32
 #define SLAF '\\'

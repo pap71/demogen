@@ -1,3 +1,21 @@
+/*
+ *  Copyright (c) 2015,2016 Michel Delorme
+ *
+ * This file is part of vergifac
+ *
+ * vergifac is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * vergifac is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with vergifac.  If not, see <http://www.gnu.org/licenses/>.
+ */
 //  Routines de controle et affiche divers
 
 #include <gtk/gtk.h>
@@ -18,7 +36,8 @@ static int jab[13] =
 
 static char *zvnv="1234567890.,-";
 static char *zvnm=" 1234567890.,-";
-static char *zvn="1234567890";
+static char *zvn="1234567890-";	// 23/4/2017 signe -
+//static char *zvn="1234567890";
 static char *zvda="1234567890/.";
 
 int chang_ctrl(GtkEntry *widls, int typ ) // controle saisie change
@@ -41,6 +60,7 @@ gchar *text;
      cur_pos=gtk_editable_get_position((GtkEditable*) editable);
      gtk_editable_set_position((GtkEditable*) editable,cur_pos-1);
      --lt;
+	gdk_beep();
 		}
 		}
 g_free(text);
@@ -204,12 +224,12 @@ return(0);
 
 int mdatof(char* pt)     // convertie  chaine en double
 {
-//int i,sign,deci,ll,mdec;
 int i,sign,ll,mdec;
+//int i,sign,deci,ll,mdec;
 char c;
 double dd,vv;
-//sign=1; deci=0; mdec=0; zsdoubl = 0; dd=0;
 sign=1; mdec=0; zsdoubl = 0; dd=0;
+//sign=1; deci=0; mdec=0; zsdoubl = 0; dd=0;
 vv=1;
 ll=strlen(pt);
 for (i=0; i<ll; ++i, ++pt )   {

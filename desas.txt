@@ -1,0 +1,1997 @@
+
+x00.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <__bswap_16>:
+   strncpy((char*)pa,da.sdat,pzw->laf); 
+  else message(13);
+			}
+else {  // SAISMON, SAICHAR,SSPEC 
+ if (pzw->laf == 1)	{
+   if ( text[0] == ' ' && lt > 1)	text[0] = text[1];
+       0:	55                   	push   %rbp
+       1:	48 89 e5             	mov    %rsp,%rbp
+       4:	48 81 ec 10 00 00 00 	sub    $0x10,%rsp
+       b:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+   pa[0]=text[0];  
+       f:	8b 45 f8             	mov    -0x8(%rbp),%eax
+      12:	c1 f8 08             	sar    $0x8,%eax
+      15:	81 e0 ff 00 00 00    	and    $0xff,%eax
+      1b:	8b 4d f8             	mov    -0x8(%rbp),%ecx
+      1e:	81 e1 ff 00 00 00    	and    $0xff,%ecx
+      24:	c1 e1 08             	shl    $0x8,%ecx
+      27:	09 c8                	or     %ecx,%eax
+      29:	81 e0 ff ff 00 00    	and    $0xffff,%eax
+      2f:	e9 00 00 00 00       	jmpq   34 <__bswap_16+0x34>
+      34:	c9                   	leaveq 
+      35:	c3                   	retq   
+
+0000000000000036 <__bswap_32>:
+gchar *text;
+if (bloqchfq == 1) return;
+svpzw = pzw;	//sauvegarde du widget saisie  a traiter
+//printf("chang_fenq pzw=%p \n",pzw);
+if (pzw->typ == SSPEC  || pzw->typ == DEFMAN) { // traitement specifique
+ if (pzw->fonc)  {
+      36:	55                   	push   %rbp
+      37:	48 89 e5             	mov    %rsp,%rbp
+      3a:	48 81 ec 10 00 00 00 	sub    $0x10,%rsp
+      41:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+  (*(pzw->fonc)) (pzw,1) ;  
+      45:	8b 45 f8             	mov    -0x8(%rbp),%eax
+      48:	81 e0 00 00 00 ff    	and    $0xff000000,%eax
+      4e:	c1 e8 18             	shr    $0x18,%eax
+      51:	8b 4d f8             	mov    -0x8(%rbp),%ecx
+      54:	81 e1 00 00 ff 00    	and    $0xff0000,%ecx
+      5a:	c1 e9 08             	shr    $0x8,%ecx
+      5d:	09 c8                	or     %ecx,%eax
+      5f:	8b 4d f8             	mov    -0x8(%rbp),%ecx
+      62:	81 e1 00 ff 00 00    	and    $0xff00,%ecx
+      68:	c1 e1 08             	shl    $0x8,%ecx
+      6b:	09 c8                	or     %ecx,%eax
+      6d:	8b 4d f8             	mov    -0x8(%rbp),%ecx
+      70:	81 e1 ff 00 00 00    	and    $0xff,%ecx
+      76:	c1 e1 18             	shl    $0x18,%ecx
+      79:	09 c8                	or     %ecx,%eax
+      7b:	e9 00 00 00 00       	jmpq   80 <__bswap_32+0x4a>
+      80:	c9                   	leaveq 
+      81:	c3                   	retq   
+
+0000000000000082 <__bswap_64>:
+while ((pli+iz)->cox > 0)	{
+ (pli+iz)->wdgl =  gtk_label_new((pli+iz)->libel);
+ gtk_fixed_put(GTK_FIXED(fixg), (pli+iz)->wdgl, (pli+iz)->cox, (pli+iz)->lyg); 
+ ++iz;
+			}
+	// entry saisie zone variable
+      82:	55                   	push   %rbp
+      83:	48 89 e5             	mov    %rsp,%rbp
+      86:	48 81 ec 10 00 00 00 	sub    $0x10,%rsp
+      8d:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+iz=0;
+      91:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+      95:	48 b9 00 00 00 00 00 	movabs $0xff00000000000000,%rcx
+      9c:	00 00 ff 
+      9f:	48 21 c8             	and    %rcx,%rax
+      a2:	48 c1 e8 38          	shr    $0x38,%rax
+      a6:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+      aa:	48 ba 00 00 00 00 00 	movabs $0xff000000000000,%rdx
+      b1:	00 ff 00 
+      b4:	48 21 d1             	and    %rdx,%rcx
+      b7:	48 c1 e9 28          	shr    $0x28,%rcx
+      bb:	48 09 c8             	or     %rcx,%rax
+      be:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+      c2:	48 ba 00 00 00 00 00 	movabs $0xff0000000000,%rdx
+      c9:	ff 00 00 
+      cc:	48 21 d1             	and    %rdx,%rcx
+      cf:	48 c1 e9 18          	shr    $0x18,%rcx
+      d3:	48 09 c8             	or     %rcx,%rax
+      d6:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+      da:	48 ba 00 00 00 00 ff 	movabs $0xff00000000,%rdx
+      e1:	00 00 00 
+      e4:	48 21 d1             	and    %rdx,%rcx
+      e7:	48 c1 e9 08          	shr    $0x8,%rcx
+      eb:	48 09 c8             	or     %rcx,%rax
+      ee:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+      f2:	48 ba 00 00 00 ff 00 	movabs $0xff000000,%rdx
+      f9:	00 00 00 
+      fc:	48 21 d1             	and    %rdx,%rcx
+      ff:	48 c1 e1 08          	shl    $0x8,%rcx
+     103:	48 09 c8             	or     %rcx,%rax
+     106:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+     10a:	48 81 e1 00 00 ff 00 	and    $0xff0000,%rcx
+     111:	48 c1 e1 18          	shl    $0x18,%rcx
+     115:	48 09 c8             	or     %rcx,%rax
+     118:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+     11c:	48 81 e1 00 ff 00 00 	and    $0xff00,%rcx
+     123:	48 c1 e1 28          	shl    $0x28,%rcx
+     127:	48 09 c8             	or     %rcx,%rax
+     12a:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+     12e:	48 81 e1 ff 00 00 00 	and    $0xff,%rcx
+     135:	48 c1 e1 38          	shl    $0x38,%rcx
+     139:	48 09 c8             	or     %rcx,%rax
+     13c:	e9 00 00 00 00       	jmpq   141 <__bswap_64+0xbf>
+     141:	c9                   	leaveq 
+     142:	c3                   	retq   
+
+0000000000000143 <maj_fenq>:
+
+DEF_S_FQ *svpzw;
+int bloqchfq=0; // inhibe signal change si affichage
+
+gboolean maj_fenq ()	//  controle, maj
+{
+     143:	55                   	push   %rbp
+     144:	48 89 e5             	mov    %rsp,%rbp
+     147:	48 81 ec 80 00 00 00 	sub    $0x80,%rsp
+     14e:	b8 00 00 00 00       	mov    $0x0,%eax
+     153:	89 45 f8             	mov    %eax,-0x8(%rbp)
+     156:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 15d <maj_fenq+0x1a>
+     15d:	48 8b 00             	mov    (%rax),%rax
+     160:	48 89 45 f0          	mov    %rax,-0x10(%rbp)
+GtkEditable *editable;
+gchar *text;
+char *pa;
+double *paf; // modif 2/10/2015 pb edition float* paf;
+int* pai; 
+if ( svpzw == NULL)	{
+     164:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 16b <maj_fenq+0x28>
+     16b:	48 8b 00             	mov    (%rax),%rax
+     16e:	48 83 f8 00          	cmp    $0x0,%rax
+     172:	0f 85 1e 00 00 00    	jne    196 <maj_fenq+0x53>
+	printf("maj_fenq svpzw=NULL ?\n");
+     178:	48 8d 05 fc ff ff ff 	lea    -0x4(%rip),%rax        # 17b <maj_fenq+0x38>
+     17f:	48 89 c7             	mov    %rax,%rdi
+     182:	b8 00 00 00 00       	mov    $0x0,%eax
+     187:	e8 fc ff ff ff       	callq  188 <maj_fenq+0x45>
+	return TRUE;
+     18c:	b8 01 00 00 00       	mov    $0x1,%eax
+     191:	e9 53 03 00 00       	jmpq   4e9 <maj_fenq+0x3a6>
+			}
+ editable = GTK_EDITABLE (pzw->wdg);
+     196:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     19a:	48 83 c0 10          	add    $0x10,%rax
+     19e:	48 89 45 c0          	mov    %rax,-0x40(%rbp)
+     1a2:	b8 00 00 00 00       	mov    $0x0,%eax
+     1a7:	e8 fc ff ff ff       	callq  1a8 <maj_fenq+0x65>
+     1ac:	48 89 45 b8          	mov    %rax,-0x48(%rbp)
+     1b0:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+     1b4:	48 89 c6             	mov    %rax,%rsi
+     1b7:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+     1bb:	48 8b 00             	mov    (%rax),%rax
+     1be:	48 89 c7             	mov    %rax,%rdi
+     1c1:	b8 00 00 00 00       	mov    $0x0,%eax
+     1c6:	e8 fc ff ff ff       	callq  1c7 <maj_fenq+0x84>
+     1cb:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+ text = gtk_editable_get_chars (editable, 0, -1);
+     1cf:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+     1d4:	49 89 c2             	mov    %rax,%r10
+     1d7:	b8 00 00 00 00       	mov    $0x0,%eax
+     1dc:	48 89 c6             	mov    %rax,%rsi
+     1df:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+     1e3:	48 89 c7             	mov    %rax,%rdi
+     1e6:	4c 89 d2             	mov    %r10,%rdx
+     1e9:	b8 00 00 00 00       	mov    $0x0,%eax
+     1ee:	e8 fc ff ff ff       	callq  1ef <maj_fenq+0xac>
+     1f3:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+ lt = strlen(text);
+     1f7:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+     1fb:	48 89 c7             	mov    %rax,%rdi
+     1fe:	b8 00 00 00 00       	mov    $0x0,%eax
+     203:	e8 fc ff ff ff       	callq  204 <maj_fenq+0xc1>
+     208:	89 45 fc             	mov    %eax,-0x4(%rbp)
+ pa = pzw->memcell;
+     20b:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     20f:	48 83 c0 18          	add    $0x18,%rax
+     213:	48 8b 08             	mov    (%rax),%rcx
+     216:	48 89 4d d8          	mov    %rcx,-0x28(%rbp)
+if (pzw->typ == SAISNUM)   {
+     21a:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     21e:	48 83 c0 20          	add    $0x20,%rax
+     222:	8b 08                	mov    (%rax),%ecx
+     224:	83 f9 14             	cmp    $0x14,%ecx
+     227:	0f 85 3b 00 00 00    	jne    268 <maj_fenq+0x125>
+  paf = (double*) pa;
+     22d:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+     231:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+  *(paf) = g_strtod(text,NULL);
+     235:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+     239:	48 89 45 b0          	mov    %rax,-0x50(%rbp)
+     23d:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+     244:	00 00 00 
+     247:	48 89 c6             	mov    %rax,%rsi
+     24a:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+     24e:	48 89 c7             	mov    %rax,%rdi
+     251:	b8 00 00 00 00       	mov    $0x0,%eax
+     256:	e8 fc ff ff ff       	callq  257 <maj_fenq+0x114>
+     25b:	48 8b 45 b0          	mov    -0x50(%rbp),%rax
+     25f:	66 0f d6 00          	movq   %xmm0,(%rax)
+     263:	e9 6d 01 00 00       	jmpq   3d5 <maj_fenq+0x292>
+			}
+else if (pzw->typ == SAISINT)   {
+     268:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     26c:	48 83 c0 20          	add    $0x20,%rax
+     270:	8b 08                	mov    (%rax),%ecx
+     272:	83 f9 19             	cmp    $0x19,%ecx
+     275:	0f 85 2c 00 00 00    	jne    2a7 <maj_fenq+0x164>
+  pai = (int*) pa;
+     27b:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+     27f:	48 89 45 c8          	mov    %rax,-0x38(%rbp)
+  *(pai) = atoi(text);
+     283:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+     287:	48 89 45 a8          	mov    %rax,-0x58(%rbp)
+     28b:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+     28f:	48 89 c7             	mov    %rax,%rdi
+     292:	b8 00 00 00 00       	mov    $0x0,%eax
+     297:	e8 fc ff ff ff       	callq  298 <maj_fenq+0x155>
+     29c:	48 8b 4d a8          	mov    -0x58(%rbp),%rcx
+     2a0:	89 01                	mov    %eax,(%rcx)
+     2a2:	e9 2e 01 00 00       	jmpq   3d5 <maj_fenq+0x292>
+			}
+else if (pzw->typ == SAISDAT)   {
+     2a7:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     2ab:	48 83 c0 20          	add    $0x20,%rax
+     2af:	8b 08                	mov    (%rax),%ecx
+     2b1:	83 f9 1a             	cmp    $0x1a,%ecx
+     2b4:	0f 85 6f 00 00 00    	jne    329 <maj_fenq+0x1e6>
+  if ( (ret = contdate((char*)text)) >= 0)
+     2ba:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+     2be:	48 89 c7             	mov    %rax,%rdi
+     2c1:	b8 00 00 00 00       	mov    $0x0,%eax
+     2c6:	e8 fc ff ff ff       	callq  2c7 <maj_fenq+0x184>
+     2cb:	89 45 f8             	mov    %eax,-0x8(%rbp)
+     2ce:	83 f8 00             	cmp    $0x0,%eax
+     2d1:	0f 8c 3b 00 00 00    	jl     312 <maj_fenq+0x1cf>
+   strncpy((char*)pa,da.sdat,pzw->laf); 
+     2d7:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     2db:	48 83 c0 24          	add    $0x24,%rax
+     2df:	8b 08                	mov    (%rax),%ecx
+     2e1:	48 63 c9             	movslq %ecx,%rcx
+     2e4:	48 89 4d a0          	mov    %rcx,-0x60(%rbp)
+     2e8:	48 8b 45 a0          	mov    -0x60(%rbp),%rax
+     2ec:	49 89 c2             	mov    %rax,%r10
+     2ef:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 2f6 <maj_fenq+0x1b3>
+     2f6:	48 89 c6             	mov    %rax,%rsi
+     2f9:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+     2fd:	48 89 c7             	mov    %rax,%rdi
+     300:	4c 89 d2             	mov    %r10,%rdx
+     303:	b8 00 00 00 00       	mov    $0x0,%eax
+     308:	e8 fc ff ff ff       	callq  309 <maj_fenq+0x1c6>
+     30d:	e9 12 00 00 00       	jmpq   324 <maj_fenq+0x1e1>
+  else message(13);
+     312:	b8 0d 00 00 00       	mov    $0xd,%eax
+     317:	48 89 c7             	mov    %rax,%rdi
+     31a:	b8 00 00 00 00       	mov    $0x0,%eax
+     31f:	e8 fc ff ff ff       	callq  320 <maj_fenq+0x1dd>
+     324:	e9 ac 00 00 00       	jmpq   3d5 <maj_fenq+0x292>
+			}
+else {  // SAISMON, SAICHAR,SSPEC 
+ if (pzw->laf == 1)	{
+     329:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     32d:	48 83 c0 24          	add    $0x24,%rax
+     331:	8b 08                	mov    (%rax),%ecx
+     333:	83 f9 01             	cmp    $0x1,%ecx
+     336:	0f 85 3f 00 00 00    	jne    37b <maj_fenq+0x238>
+   if ( text[0] == ' ' && lt > 1)	text[0] = text[1];
+     33c:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+     340:	0f be 08             	movsbl (%rax),%ecx
+     343:	83 f9 20             	cmp    $0x20,%ecx
+     346:	0f 85 1d 00 00 00    	jne    369 <maj_fenq+0x226>
+     34c:	8b 45 fc             	mov    -0x4(%rbp),%eax
+     34f:	83 f8 01             	cmp    $0x1,%eax
+     352:	0f 8e 11 00 00 00    	jle    369 <maj_fenq+0x226>
+     358:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+     35c:	48 8b 4d e0          	mov    -0x20(%rbp),%rcx
+     360:	48 83 c1 01          	add    $0x1,%rcx
+     364:	0f be 11             	movsbl (%rcx),%edx
+     367:	88 10                	mov    %dl,(%rax)
+   pa[0]=text[0];  
+     369:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+     36d:	48 8b 4d e0          	mov    -0x20(%rbp),%rcx
+     371:	0f be 11             	movsbl (%rcx),%edx
+     374:	88 10                	mov    %dl,(%rax)
+     376:	e9 5a 00 00 00       	jmpq   3d5 <maj_fenq+0x292>
+				}
+ else	{	
+  if ( lt > pzw->laf)  message(1); //lt=pzw->laf;
+     37b:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     37f:	48 83 c0 24          	add    $0x24,%rax
+     383:	8b 4d fc             	mov    -0x4(%rbp),%ecx
+     386:	8b 10                	mov    (%rax),%edx
+     388:	39 d1                	cmp    %edx,%ecx
+     38a:	0f 8e 12 00 00 00    	jle    3a2 <maj_fenq+0x25f>
+     390:	b8 01 00 00 00       	mov    $0x1,%eax
+     395:	48 89 c7             	mov    %rax,%rdi
+     398:	b8 00 00 00 00       	mov    $0x0,%eax
+     39d:	e8 fc ff ff ff       	callq  39e <maj_fenq+0x25b>
+  strncpy((char*)pa,text,pzw->laf); // efface fin de saisie precedente
+     3a2:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     3a6:	48 83 c0 24          	add    $0x24,%rax
+     3aa:	8b 08                	mov    (%rax),%ecx
+     3ac:	48 63 c9             	movslq %ecx,%rcx
+     3af:	48 89 4d 98          	mov    %rcx,-0x68(%rbp)
+     3b3:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+     3b7:	49 89 c2             	mov    %rax,%r10
+     3ba:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+     3be:	48 89 c6             	mov    %rax,%rsi
+     3c1:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+     3c5:	48 89 c7             	mov    %rax,%rdi
+     3c8:	4c 89 d2             	mov    %r10,%rdx
+     3cb:	b8 00 00 00 00       	mov    $0x0,%eax
+     3d0:	e8 fc ff ff ff       	callq  3d1 <maj_fenq+0x28e>
+	}
+
+
+	}
+if (pzw->fonc && ret >= 0)  {		// ret =date vide ou ok
+     3d5:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     3d9:	48 83 c0 28          	add    $0x28,%rax
+     3dd:	48 8b 08             	mov    (%rax),%rcx
+     3e0:	48 83 f9 00          	cmp    $0x0,%rcx
+     3e4:	0f 84 39 00 00 00    	je     423 <maj_fenq+0x2e0>
+     3ea:	8b 45 f8             	mov    -0x8(%rbp),%eax
+     3ed:	83 f8 00             	cmp    $0x0,%eax
+     3f0:	0f 8c 2d 00 00 00    	jl     423 <maj_fenq+0x2e0>
+	ret = (*(pzw->fonc)) (pzw,0) ;  
+     3f6:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     3fa:	48 83 c0 28          	add    $0x28,%rax
+     3fe:	48 8b 08             	mov    (%rax),%rcx
+     401:	48 89 4d 90          	mov    %rcx,-0x70(%rbp)
+     405:	b8 00 00 00 00       	mov    $0x0,%eax
+     40a:	48 89 c6             	mov    %rax,%rsi
+     40d:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     411:	48 89 c7             	mov    %rax,%rdi
+     414:	b8 00 00 00 00       	mov    $0x0,%eax
+     419:	4c 8b 5d 90          	mov    -0x70(%rbp),%r11
+     41d:	41 ff d3             	callq  *%r11
+     420:	89 45 f8             	mov    %eax,-0x8(%rbp)
+		 }
+svpzw = NULL;	// tout le traitement apres saisie a du etre fait
+     423:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+     42a:	00 00 00 
+     42d:	4c 8b 1d 00 00 00 00 	mov    0x0(%rip),%r11        # 434 <maj_fenq+0x2f1>
+     434:	49 89 03             	mov    %rax,(%r11)
+//printf("maj_fenq-2 pzw=%p ret=%d\n",pzw,ret);
+if (ret == -1) {
+     437:	8b 45 f8             	mov    -0x8(%rbp),%eax
+     43a:	83 f8 ff             	cmp    $0xffffffff,%eax
+     43d:	0f 85 8b 00 00 00    	jne    4ce <maj_fenq+0x38b>
+ if (pzw->laf == 1)  gtk_editable_delete_text((GtkEditable*) editable,0,-1);
+     443:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     447:	48 83 c0 24          	add    $0x24,%rax
+     44b:	8b 08                	mov    (%rax),%ecx
+     44d:	83 f9 01             	cmp    $0x1,%ecx
+     450:	0f 85 24 00 00 00    	jne    47a <maj_fenq+0x337>
+     456:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+     45b:	49 89 c2             	mov    %rax,%r10
+     45e:	b8 00 00 00 00       	mov    $0x0,%eax
+     463:	48 89 c6             	mov    %rax,%rsi
+     466:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+     46a:	48 89 c7             	mov    %rax,%rdi
+     46d:	4c 89 d2             	mov    %r10,%rdx
+     470:	b8 00 00 00 00       	mov    $0x0,%eax
+     475:	e8 fc ff ff ff       	callq  476 <maj_fenq+0x333>
+   gtk_editable_set_position((GtkEditable*) editable,0);
+     47a:	b8 00 00 00 00       	mov    $0x0,%eax
+     47f:	48 89 c6             	mov    %rax,%rsi
+     482:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+     486:	48 89 c7             	mov    %rax,%rdi
+     489:	b8 00 00 00 00       	mov    $0x0,%eax
+     48e:	e8 fc ff ff ff       	callq  48f <maj_fenq+0x34c>
+   g_free(text);	
+     493:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+     497:	48 89 c7             	mov    %rax,%rdi
+     49a:	b8 00 00 00 00       	mov    $0x0,%eax
+     49f:	e8 fc ff ff ff       	callq  4a0 <maj_fenq+0x35d>
+   gtk_widget_grab_focus (pzw->wdg); 
+     4a4:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     4a8:	48 83 c0 10          	add    $0x10,%rax
+     4ac:	48 89 45 88          	mov    %rax,-0x78(%rbp)
+     4b0:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+     4b4:	48 8b 00             	mov    (%rax),%rax
+     4b7:	48 89 c7             	mov    %rax,%rdi
+     4ba:	b8 00 00 00 00       	mov    $0x0,%eax
+     4bf:	e8 fc ff ff ff       	callq  4c0 <maj_fenq+0x37d>
+   return TRUE;
+     4c4:	b8 01 00 00 00       	mov    $0x1,%eax
+     4c9:	e9 1b 00 00 00       	jmpq   4e9 <maj_fenq+0x3a6>
+		}
+g_free(text);		
+     4ce:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+     4d2:	48 89 c7             	mov    %rax,%rdi
+     4d5:	b8 00 00 00 00       	mov    $0x0,%eax
+     4da:	e8 fc ff ff ff       	callq  4db <maj_fenq+0x398>
+return FALSE;
+     4df:	b8 00 00 00 00       	mov    $0x0,%eax
+     4e4:	e9 00 00 00 00       	jmpq   4e9 <maj_fenq+0x3a6>
+     4e9:	c9                   	leaveq 
+     4ea:	c3                   	retq   
+
+00000000000004eb <focout_fenq>:
+}
+
+gboolean focout_fenq (GtkWidget *widget, GdkEventKey *event, DEF_S_FQ *pzw)
+{
+     4eb:	55                   	push   %rbp
+     4ec:	48 89 e5             	mov    %rsp,%rbp
+     4ef:	48 81 ec 20 00 00 00 	sub    $0x20,%rsp
+     4f6:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+     4fa:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
+     4fe:	48 89 55 e8          	mov    %rdx,-0x18(%rbp)
+//pw fait ref au widget suivant
+//printf("focus-out  pzw=%p svpzw=%p\n",pzw,svpzw);
+if (svpzw != NULL) maj_fenq ();
+     502:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 509 <focout_fenq+0x1e>
+     509:	48 8b 00             	mov    (%rax),%rax
+     50c:	48 83 f8 00          	cmp    $0x0,%rax
+     510:	0f 84 0a 00 00 00    	je     520 <focout_fenq+0x35>
+     516:	b8 00 00 00 00       	mov    $0x0,%eax
+     51b:	e8 fc ff ff ff       	callq  51c <focout_fenq+0x31>
+  return FALSE;
+     520:	b8 00 00 00 00       	mov    $0x0,%eax
+     525:	e9 00 00 00 00       	jmpq   52a <focout_fenq+0x3f>
+     52a:	c9                   	leaveq 
+     52b:	c3                   	retq   
+
+000000000000052c <chang_fenq>:
+}
+
+void chang_fenq (GtkEntry *widls, DEF_S_FQ *pzw)	// CHANGE
+{		// attention active par affichage sans saisie
+     52c:	55                   	push   %rbp
+     52d:	48 89 e5             	mov    %rsp,%rbp
+     530:	48 81 ec 40 00 00 00 	sub    $0x40,%rsp
+     537:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+     53b:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
+int lt;
+GtkEditable *editable;
+gchar *text;
+if (bloqchfq == 1) return;
+     53f:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 546 <chang_fenq+0x1a>
+     546:	8b 00                	mov    (%rax),%eax
+     548:	83 f8 01             	cmp    $0x1,%eax
+     54b:	0f 85 05 00 00 00    	jne    556 <chang_fenq+0x2a>
+     551:	e9 7f 01 00 00       	jmpq   6d5 <chang_fenq+0x1a9>
+svpzw = pzw;	//sauvegarde du widget saisie  a traiter
+     556:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     55a:	4c 8b 1d 00 00 00 00 	mov    0x0(%rip),%r11        # 561 <chang_fenq+0x35>
+     561:	49 89 03             	mov    %rax,(%r11)
+//printf("chang_fenq pzw=%p \n",pzw);
+if (pzw->typ == SSPEC  || pzw->typ == DEFMAN) { // traitement specifique
+     564:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     568:	48 83 c0 20          	add    $0x20,%rax
+     56c:	8b 08                	mov    (%rax),%ecx
+     56e:	83 f9 13             	cmp    $0x13,%ecx
+     571:	0f 84 18 00 00 00    	je     58f <chang_fenq+0x63>
+     577:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     57b:	48 83 c0 20          	add    $0x20,%rax
+     57f:	8b 08                	mov    (%rax),%ecx
+     581:	83 f9 12             	cmp    $0x12,%ecx
+     584:	0f 84 05 00 00 00    	je     58f <chang_fenq+0x63>
+     58a:	e9 49 00 00 00       	jmpq   5d8 <chang_fenq+0xac>
+ if (pzw->fonc)  {
+     58f:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     593:	48 83 c0 28          	add    $0x28,%rax
+     597:	48 8b 08             	mov    (%rax),%rcx
+     59a:	48 83 f9 00          	cmp    $0x0,%rcx
+     59e:	0f 84 2a 00 00 00    	je     5ce <chang_fenq+0xa2>
+  (*(pzw->fonc)) (pzw,1) ;  
+     5a4:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     5a8:	48 83 c0 28          	add    $0x28,%rax
+     5ac:	48 8b 08             	mov    (%rax),%rcx
+     5af:	48 89 4d d0          	mov    %rcx,-0x30(%rbp)
+     5b3:	b8 01 00 00 00       	mov    $0x1,%eax
+     5b8:	48 89 c6             	mov    %rax,%rsi
+     5bb:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     5bf:	48 89 c7             	mov    %rax,%rdi
+     5c2:	b8 00 00 00 00       	mov    $0x0,%eax
+     5c7:	4c 8b 5d d0          	mov    -0x30(%rbp),%r11
+     5cb:	41 ff d3             	callq  *%r11
+		 }
+  return;
+     5ce:	e9 02 01 00 00       	jmpq   6d5 <chang_fenq+0x1a9>
+     5d3:	e9 b8 00 00 00       	jmpq   690 <chang_fenq+0x164>
+ 			}
+else if (pzw->typ > 19 )     { //&& lt > 0)   {  
+     5d8:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     5dc:	48 83 c0 20          	add    $0x20,%rax
+     5e0:	8b 08                	mov    (%rax),%ecx
+     5e2:	83 f9 13             	cmp    $0x13,%ecx
+     5e5:	0f 8e 2e 00 00 00    	jle    619 <chang_fenq+0xed>
+    lt=chang_ctrl(widls,pzw->typ);
+     5eb:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     5ef:	48 83 c0 20          	add    $0x20,%rax
+     5f3:	48 89 45 c8          	mov    %rax,-0x38(%rbp)
+     5f7:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+     5fb:	8b 00                	mov    (%rax),%eax
+     5fd:	48 89 c6             	mov    %rax,%rsi
+     600:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     604:	48 89 c7             	mov    %rax,%rdi
+     607:	b8 00 00 00 00       	mov    $0x0,%eax
+     60c:	e8 fc ff ff ff       	callq  60d <chang_fenq+0xe1>
+     611:	89 45 ec             	mov    %eax,-0x14(%rbp)
+     614:	e9 77 00 00 00       	jmpq   690 <chang_fenq+0x164>
+			}
+else 	{
+    editable = GTK_EDITABLE (widls);
+     619:	b8 00 00 00 00       	mov    $0x0,%eax
+     61e:	e8 fc ff ff ff       	callq  61f <chang_fenq+0xf3>
+     623:	48 89 45 c0          	mov    %rax,-0x40(%rbp)
+     627:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+     62b:	48 89 c6             	mov    %rax,%rsi
+     62e:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     632:	48 89 c7             	mov    %rax,%rdi
+     635:	b8 00 00 00 00       	mov    $0x0,%eax
+     63a:	e8 fc ff ff ff       	callq  63b <chang_fenq+0x10f>
+     63f:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
+    text = gtk_editable_get_chars (editable, 0, -1);
+     643:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+     648:	49 89 c2             	mov    %rax,%r10
+     64b:	b8 00 00 00 00       	mov    $0x0,%eax
+     650:	48 89 c6             	mov    %rax,%rsi
+     653:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+     657:	48 89 c7             	mov    %rax,%rdi
+     65a:	4c 89 d2             	mov    %r10,%rdx
+     65d:	b8 00 00 00 00       	mov    $0x0,%eax
+     662:	e8 fc ff ff ff       	callq  663 <chang_fenq+0x137>
+     667:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
+    lt = strlen(text);
+     66b:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+     66f:	48 89 c7             	mov    %rax,%rdi
+     672:	b8 00 00 00 00       	mov    $0x0,%eax
+     677:	e8 fc ff ff ff       	callq  678 <chang_fenq+0x14c>
+     67c:	89 45 ec             	mov    %eax,-0x14(%rbp)
+    g_free(text);
+     67f:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+     683:	48 89 c7             	mov    %rax,%rdi
+     686:	b8 00 00 00 00       	mov    $0x0,%eax
+     68b:	e8 fc ff ff ff       	callq  68c <chang_fenq+0x160>
+	}
+if ( lt == pzw->laf )
+     690:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     694:	48 83 c0 24          	add    $0x24,%rax
+     698:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+     69b:	8b 10                	mov    (%rax),%edx
+     69d:	39 d1                	cmp    %edx,%ecx
+     69f:	0f 85 30 00 00 00    	jne    6d5 <chang_fenq+0x1a9>
+ g_signal_emit_by_name(widls,"move-focus",GTK_DIR_TAB_FORWARD,pzw);
+     6a5:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     6a9:	49 89 c3             	mov    %rax,%r11
+     6ac:	b8 00 00 00 00       	mov    $0x0,%eax
+     6b1:	49 89 c2             	mov    %rax,%r10
+     6b4:	48 8d 05 fc ff ff ff 	lea    -0x4(%rip),%rax        # 6b7 <chang_fenq+0x18b>
+     6bb:	48 89 c6             	mov    %rax,%rsi
+     6be:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     6c2:	48 89 c7             	mov    %rax,%rdi
+     6c5:	4c 89 d2             	mov    %r10,%rdx
+     6c8:	4c 89 d9             	mov    %r11,%rcx
+     6cb:	b8 00 00 00 00       	mov    $0x0,%eax
+     6d0:	e8 fc ff ff ff       	callq  6d1 <chang_fenq+0x1a5>
+     6d5:	c9                   	leaveq 
+     6d6:	c3                   	retq   
+
+00000000000006d7 <activ_fenq>:
+}
+
+
+void activ_fenq (GtkWidget *widls, DEF_S_FQ *pzw)
+{
+     6d7:	55                   	push   %rbp
+     6d8:	48 89 e5             	mov    %rsp,%rbp
+     6db:	48 81 ec 10 00 00 00 	sub    $0x10,%rsp
+     6e2:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+     6e6:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
+//if (svpzw != NULL) maj_fenq (); //(widls); focout va le faire
+g_signal_emit_by_name(widls,"move-focus",GTK_DIR_TAB_FORWARD,pzw);
+     6ea:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     6ee:	49 89 c3             	mov    %rax,%r11
+     6f1:	b8 00 00 00 00       	mov    $0x0,%eax
+     6f6:	49 89 c2             	mov    %rax,%r10
+     6f9:	48 8d 05 fc ff ff ff 	lea    -0x4(%rip),%rax        # 6fc <activ_fenq+0x25>
+     700:	48 89 c6             	mov    %rax,%rsi
+     703:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     707:	48 89 c7             	mov    %rax,%rdi
+     70a:	4c 89 d2             	mov    %r10,%rdx
+     70d:	4c 89 d9             	mov    %r11,%rcx
+     710:	b8 00 00 00 00       	mov    $0x0,%eax
+     715:	e8 fc ff ff ff       	callq  716 <activ_fenq+0x3f>
+     71a:	c9                   	leaveq 
+     71b:	c3                   	retq   
+
+000000000000071c <quit_fenq>:
+//printf("activ-focus pw=%p svpw=%p\n",pw,svpw);
+}
+
+gboolean quit_fenq (GtkWidget *widls, FENQ* pf)
+{
+     71c:	55                   	push   %rbp
+     71d:	48 89 e5             	mov    %rsp,%rbp
+     720:	48 81 ec 10 00 00 00 	sub    $0x10,%rsp
+     727:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+     72b:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
+pf->win = NULL;
+     72f:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+     733:	48 b9 00 00 00 00 00 	movabs $0x0,%rcx
+     73a:	00 00 00 
+     73d:	48 89 08             	mov    %rcx,(%rax)
+return FALSE;
+     740:	b8 00 00 00 00       	mov    $0x0,%eax
+     745:	e9 00 00 00 00       	jmpq   74a <quit_fenq+0x2e>
+     74a:	c9                   	leaveq 
+     74b:	c3                   	retq   
+
+000000000000074c <crefenq>:
+}
+
+void crefenq(FENQ* pf,void* pd)	// creation fenetre qq
+{
+     74c:	55                   	push   %rbp
+     74d:	48 89 e5             	mov    %rsp,%rbp
+     750:	48 81 ec 20 02 00 00 	sub    $0x220,%rsp
+     757:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+     75b:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
+     75f:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     763:	48 83 c0 28          	add    $0x28,%rax
+     767:	48 8b 08             	mov    (%rax),%rcx
+     76a:	48 89 4d e0          	mov    %rcx,-0x20(%rbp)
+     76e:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     772:	48 83 c0 20          	add    $0x20,%rax
+     776:	48 8b 08             	mov    (%rax),%rcx
+     779:	48 89 4d d8          	mov    %rcx,-0x28(%rbp)
+DEF_L_FQ *pli = pf->pdeflib;
+DEF_S_FQ *pz = pf->pdefz;
+GtkWidget* fixg;  //pf->vboxwin
+char *pa;
+
+pf->win = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+     77d:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     781:	48 89 45 c0          	mov    %rax,-0x40(%rbp)
+     785:	b8 00 00 00 00       	mov    $0x0,%eax
+     78a:	48 89 c7             	mov    %rax,%rdi
+     78d:	b8 00 00 00 00       	mov    $0x0,%eax
+     792:	e8 fc ff ff ff       	callq  793 <crefenq+0x47>
+     797:	48 8b 4d c0          	mov    -0x40(%rbp),%rcx
+     79b:	48 89 01             	mov    %rax,(%rcx)
+gtk_window_move(GTK_WINDOW(pf->win), pf->posx, pf->posy);
+     79e:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     7a2:	48 89 45 b8          	mov    %rax,-0x48(%rbp)
+     7a6:	b8 00 00 00 00       	mov    $0x0,%eax
+     7ab:	e8 fc ff ff ff       	callq  7ac <crefenq+0x60>
+     7b0:	48 89 45 b0          	mov    %rax,-0x50(%rbp)
+     7b4:	48 8b 45 b0          	mov    -0x50(%rbp),%rax
+     7b8:	48 89 c6             	mov    %rax,%rsi
+     7bb:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+     7bf:	48 8b 00             	mov    (%rax),%rax
+     7c2:	48 89 c7             	mov    %rax,%rdi
+     7c5:	b8 00 00 00 00       	mov    $0x0,%eax
+     7ca:	e8 fc ff ff ff       	callq  7cb <crefenq+0x7f>
+     7cf:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+     7d3:	48 83 c1 18          	add    $0x18,%rcx
+     7d7:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+     7db:	48 83 c2 1c          	add    $0x1c,%rdx
+     7df:	48 89 45 a8          	mov    %rax,-0x58(%rbp)
+     7e3:	48 89 4d a0          	mov    %rcx,-0x60(%rbp)
+     7e7:	48 89 55 98          	mov    %rdx,-0x68(%rbp)
+     7eb:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+     7ef:	8b 00                	mov    (%rax),%eax
+     7f1:	49 89 c2             	mov    %rax,%r10
+     7f4:	48 8b 45 a0          	mov    -0x60(%rbp),%rax
+     7f8:	8b 00                	mov    (%rax),%eax
+     7fa:	48 89 c6             	mov    %rax,%rsi
+     7fd:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+     801:	48 89 c7             	mov    %rax,%rdi
+     804:	4c 89 d2             	mov    %r10,%rdx
+     807:	b8 00 00 00 00       	mov    $0x0,%eax
+     80c:	e8 fc ff ff ff       	callq  80d <crefenq+0xc1>
+if (pf->fenlarg != 0)
+     811:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     815:	48 83 c0 10          	add    $0x10,%rax
+     819:	8b 08                	mov    (%rax),%ecx
+     81b:	83 f9 00             	cmp    $0x0,%ecx
+     81e:	0f 84 7f 00 00 00    	je     8a3 <crefenq+0x157>
+ gtk_window_set_default_size(GTK_WINDOW(pf->win), pf->fenlarg, pf->fenhaut);
+     824:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     828:	48 89 45 90          	mov    %rax,-0x70(%rbp)
+     82c:	b8 00 00 00 00       	mov    $0x0,%eax
+     831:	e8 fc ff ff ff       	callq  832 <crefenq+0xe6>
+     836:	48 89 45 88          	mov    %rax,-0x78(%rbp)
+     83a:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+     83e:	48 89 c6             	mov    %rax,%rsi
+     841:	48 8b 45 90          	mov    -0x70(%rbp),%rax
+     845:	48 8b 00             	mov    (%rax),%rax
+     848:	48 89 c7             	mov    %rax,%rdi
+     84b:	b8 00 00 00 00       	mov    $0x0,%eax
+     850:	e8 fc ff ff ff       	callq  851 <crefenq+0x105>
+     855:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+     859:	48 83 c1 10          	add    $0x10,%rcx
+     85d:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+     861:	48 83 c2 14          	add    $0x14,%rdx
+     865:	48 89 45 80          	mov    %rax,-0x80(%rbp)
+     869:	48 89 8d 78 ff ff ff 	mov    %rcx,-0x88(%rbp)
+     870:	48 89 95 70 ff ff ff 	mov    %rdx,-0x90(%rbp)
+     877:	48 8b 85 70 ff ff ff 	mov    -0x90(%rbp),%rax
+     87e:	8b 00                	mov    (%rax),%eax
+     880:	49 89 c2             	mov    %rax,%r10
+     883:	48 8b 85 78 ff ff ff 	mov    -0x88(%rbp),%rax
+     88a:	8b 00                	mov    (%rax),%eax
+     88c:	48 89 c6             	mov    %rax,%rsi
+     88f:	48 8b 45 80          	mov    -0x80(%rbp),%rax
+     893:	48 89 c7             	mov    %rax,%rdi
+     896:	4c 89 d2             	mov    %r10,%rdx
+     899:	b8 00 00 00 00       	mov    $0x0,%eax
+     89e:	e8 fc ff ff ff       	callq  89f <crefenq+0x153>
+gtk_window_set_title(GTK_WINDOW(pf->win), pf->fentit);
+     8a3:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     8a7:	48 89 85 68 ff ff ff 	mov    %rax,-0x98(%rbp)
+     8ae:	b8 00 00 00 00       	mov    $0x0,%eax
+     8b3:	e8 fc ff ff ff       	callq  8b4 <crefenq+0x168>
+     8b8:	48 89 85 60 ff ff ff 	mov    %rax,-0xa0(%rbp)
+     8bf:	48 8b 85 60 ff ff ff 	mov    -0xa0(%rbp),%rax
+     8c6:	48 89 c6             	mov    %rax,%rsi
+     8c9:	48 8b 85 68 ff ff ff 	mov    -0x98(%rbp),%rax
+     8d0:	48 8b 00             	mov    (%rax),%rax
+     8d3:	48 89 c7             	mov    %rax,%rdi
+     8d6:	b8 00 00 00 00       	mov    $0x0,%eax
+     8db:	e8 fc ff ff ff       	callq  8dc <crefenq+0x190>
+     8e0:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+     8e4:	48 83 c1 08          	add    $0x8,%rcx
+     8e8:	48 89 85 58 ff ff ff 	mov    %rax,-0xa8(%rbp)
+     8ef:	48 89 8d 50 ff ff ff 	mov    %rcx,-0xb0(%rbp)
+     8f6:	48 8b 85 50 ff ff ff 	mov    -0xb0(%rbp),%rax
+     8fd:	48 8b 00             	mov    (%rax),%rax
+     900:	48 89 c6             	mov    %rax,%rsi
+     903:	48 8b 85 58 ff ff ff 	mov    -0xa8(%rbp),%rax
+     90a:	48 89 c7             	mov    %rax,%rdi
+     90d:	b8 00 00 00 00       	mov    $0x0,%eax
+     912:	e8 fc ff ff ff       	callq  913 <crefenq+0x1c7>
+gtk_container_set_border_width(GTK_CONTAINER(pf->win), 0);
+     917:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     91b:	48 89 85 48 ff ff ff 	mov    %rax,-0xb8(%rbp)
+     922:	b8 00 00 00 00       	mov    $0x0,%eax
+     927:	e8 fc ff ff ff       	callq  928 <crefenq+0x1dc>
+     92c:	48 89 85 40 ff ff ff 	mov    %rax,-0xc0(%rbp)
+     933:	48 8b 85 40 ff ff ff 	mov    -0xc0(%rbp),%rax
+     93a:	48 89 c6             	mov    %rax,%rsi
+     93d:	48 8b 85 48 ff ff ff 	mov    -0xb8(%rbp),%rax
+     944:	48 8b 00             	mov    (%rax),%rax
+     947:	48 89 c7             	mov    %rax,%rdi
+     94a:	b8 00 00 00 00       	mov    $0x0,%eax
+     94f:	e8 fc ff ff ff       	callq  950 <crefenq+0x204>
+     954:	48 89 85 38 ff ff ff 	mov    %rax,-0xc8(%rbp)
+     95b:	b8 00 00 00 00       	mov    $0x0,%eax
+     960:	48 89 c6             	mov    %rax,%rsi
+     963:	48 8b 85 38 ff ff ff 	mov    -0xc8(%rbp),%rax
+     96a:	48 89 c7             	mov    %rax,%rdi
+     96d:	b8 00 00 00 00       	mov    $0x0,%eax
+     972:	e8 fc ff ff ff       	callq  973 <crefenq+0x227>
+	//  fix globale
+fixg = gtk_fixed_new();
+     977:	b8 00 00 00 00       	mov    $0x0,%eax
+     97c:	e8 fc ff ff ff       	callq  97d <crefenq+0x231>
+     981:	48 89 45 d0          	mov    %rax,-0x30(%rbp)
+gtk_container_add(GTK_CONTAINER(pf->win), fixg);
+     985:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     989:	48 89 85 30 ff ff ff 	mov    %rax,-0xd0(%rbp)
+     990:	b8 00 00 00 00       	mov    $0x0,%eax
+     995:	e8 fc ff ff ff       	callq  996 <crefenq+0x24a>
+     99a:	48 89 85 28 ff ff ff 	mov    %rax,-0xd8(%rbp)
+     9a1:	48 8b 85 28 ff ff ff 	mov    -0xd8(%rbp),%rax
+     9a8:	48 89 c6             	mov    %rax,%rsi
+     9ab:	48 8b 85 30 ff ff ff 	mov    -0xd0(%rbp),%rax
+     9b2:	48 8b 00             	mov    (%rax),%rax
+     9b5:	48 89 c7             	mov    %rax,%rdi
+     9b8:	b8 00 00 00 00       	mov    $0x0,%eax
+     9bd:	e8 fc ff ff ff       	callq  9be <crefenq+0x272>
+     9c2:	48 89 85 20 ff ff ff 	mov    %rax,-0xe0(%rbp)
+     9c9:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+     9cd:	48 89 c6             	mov    %rax,%rsi
+     9d0:	48 8b 85 20 ff ff ff 	mov    -0xe0(%rbp),%rax
+     9d7:	48 89 c7             	mov    %rax,%rdi
+     9da:	b8 00 00 00 00       	mov    $0x0,%eax
+     9df:	e8 fc ff ff ff       	callq  9e0 <crefenq+0x294>
+
+	//  box bouton 
+ if (pf->fbouton)  {
+     9e4:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     9e8:	48 83 c0 30          	add    $0x30,%rax
+     9ec:	48 8b 08             	mov    (%rax),%rcx
+     9ef:	48 83 f9 00          	cmp    $0x0,%rcx
+     9f3:	0f 84 28 00 00 00    	je     a21 <crefenq+0x2d5>
+	 (*(pf->fbouton)) (fixg) ;  
+     9f9:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+     9fd:	48 83 c0 30          	add    $0x30,%rax
+     a01:	48 8b 08             	mov    (%rax),%rcx
+     a04:	48 89 8d 18 ff ff ff 	mov    %rcx,-0xe8(%rbp)
+     a0b:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+     a0f:	48 89 c7             	mov    %rax,%rdi
+     a12:	b8 00 00 00 00       	mov    $0x0,%eax
+     a17:	4c 8b 9d 18 ff ff ff 	mov    -0xe8(%rbp),%r11
+     a1e:	41 ff d3             	callq  *%r11
+		 }
+	// libelle
+iz=0;
+     a21:	b8 00 00 00 00       	mov    $0x0,%eax
+     a26:	89 45 ec             	mov    %eax,-0x14(%rbp)
+while ((pli+iz)->cox > 0)	{
+     a29:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     a2c:	48 63 c0             	movslq %eax,%rax
+     a2f:	48 c1 e0 05          	shl    $0x5,%rax
+     a33:	48 8b 4d e0          	mov    -0x20(%rbp),%rcx
+     a37:	48 01 c1             	add    %rax,%rcx
+     a3a:	8b 01                	mov    (%rcx),%eax
+     a3c:	83 f8 00             	cmp    $0x0,%eax
+     a3f:	0f 8e 29 01 00 00    	jle    b6e <crefenq+0x422>
+ (pli+iz)->wdgl =  gtk_label_new((pli+iz)->libel);
+     a45:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     a48:	48 63 c0             	movslq %eax,%rax
+     a4b:	48 c1 e0 05          	shl    $0x5,%rax
+     a4f:	48 8b 4d e0          	mov    -0x20(%rbp),%rcx
+     a53:	48 01 c1             	add    %rax,%rcx
+     a56:	48 83 c1 08          	add    $0x8,%rcx
+     a5a:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     a5d:	48 63 c0             	movslq %eax,%rax
+     a60:	48 c1 e0 05          	shl    $0x5,%rax
+     a64:	48 8b 55 e0          	mov    -0x20(%rbp),%rdx
+     a68:	48 01 c2             	add    %rax,%rdx
+     a6b:	48 83 c2 18          	add    $0x18,%rdx
+     a6f:	48 89 8d 10 ff ff ff 	mov    %rcx,-0xf0(%rbp)
+     a76:	48 89 95 08 ff ff ff 	mov    %rdx,-0xf8(%rbp)
+     a7d:	48 8b 85 08 ff ff ff 	mov    -0xf8(%rbp),%rax
+     a84:	48 8b 00             	mov    (%rax),%rax
+     a87:	48 89 c7             	mov    %rax,%rdi
+     a8a:	b8 00 00 00 00       	mov    $0x0,%eax
+     a8f:	e8 fc ff ff ff       	callq  a90 <crefenq+0x344>
+     a94:	48 8b 8d 10 ff ff ff 	mov    -0xf0(%rbp),%rcx
+     a9b:	48 89 01             	mov    %rax,(%rcx)
+ gtk_fixed_put(GTK_FIXED(fixg), (pli+iz)->wdgl, (pli+iz)->cox, (pli+iz)->lyg); 
+     a9e:	b8 00 00 00 00       	mov    $0x0,%eax
+     aa3:	e8 fc ff ff ff       	callq  aa4 <crefenq+0x358>
+     aa8:	48 89 85 00 ff ff ff 	mov    %rax,-0x100(%rbp)
+     aaf:	48 8b 85 00 ff ff ff 	mov    -0x100(%rbp),%rax
+     ab6:	48 89 c6             	mov    %rax,%rsi
+     ab9:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+     abd:	48 89 c7             	mov    %rax,%rdi
+     ac0:	b8 00 00 00 00       	mov    $0x0,%eax
+     ac5:	e8 fc ff ff ff       	callq  ac6 <crefenq+0x37a>
+     aca:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+     acd:	48 63 c9             	movslq %ecx,%rcx
+     ad0:	48 c1 e1 05          	shl    $0x5,%rcx
+     ad4:	48 8b 55 e0          	mov    -0x20(%rbp),%rdx
+     ad8:	48 01 ca             	add    %rcx,%rdx
+     adb:	48 83 c2 08          	add    $0x8,%rdx
+     adf:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+     ae2:	48 63 c9             	movslq %ecx,%rcx
+     ae5:	48 c1 e1 05          	shl    $0x5,%rcx
+     ae9:	48 89 85 f8 fe ff ff 	mov    %rax,-0x108(%rbp)
+     af0:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
+     af4:	48 01 c8             	add    %rcx,%rax
+     af7:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+     afa:	48 63 c9             	movslq %ecx,%rcx
+     afd:	48 c1 e1 05          	shl    $0x5,%rcx
+     b01:	48 89 95 f0 fe ff ff 	mov    %rdx,-0x110(%rbp)
+     b08:	48 8b 55 e0          	mov    -0x20(%rbp),%rdx
+     b0c:	48 01 ca             	add    %rcx,%rdx
+     b0f:	48 83 c2 04          	add    $0x4,%rdx
+     b13:	48 89 85 e8 fe ff ff 	mov    %rax,-0x118(%rbp)
+     b1a:	48 89 95 e0 fe ff ff 	mov    %rdx,-0x120(%rbp)
+     b21:	48 8b 85 e0 fe ff ff 	mov    -0x120(%rbp),%rax
+     b28:	8b 00                	mov    (%rax),%eax
+     b2a:	49 89 c3             	mov    %rax,%r11
+     b2d:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+     b34:	8b 00                	mov    (%rax),%eax
+     b36:	49 89 c2             	mov    %rax,%r10
+     b39:	48 8b 85 f0 fe ff ff 	mov    -0x110(%rbp),%rax
+     b40:	48 8b 00             	mov    (%rax),%rax
+     b43:	48 89 c6             	mov    %rax,%rsi
+     b46:	48 8b 85 f8 fe ff ff 	mov    -0x108(%rbp),%rax
+     b4d:	48 89 c7             	mov    %rax,%rdi
+     b50:	4c 89 d2             	mov    %r10,%rdx
+     b53:	4c 89 d9             	mov    %r11,%rcx
+     b56:	b8 00 00 00 00       	mov    $0x0,%eax
+     b5b:	e8 fc ff ff ff       	callq  b5c <crefenq+0x410>
+ ++iz;
+     b60:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     b63:	83 c0 01             	add    $0x1,%eax
+     b66:	89 45 ec             	mov    %eax,-0x14(%rbp)
+     b69:	e9 bb fe ff ff       	jmpq   a29 <crefenq+0x2dd>
+			}
+	// entry saisie zone variable
+iz=0;
+     b6e:	b8 00 00 00 00       	mov    $0x0,%eax
+     b73:	89 45 ec             	mov    %eax,-0x14(%rbp)
+while ((pz+iz)->cox > 0)	{
+     b76:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     b79:	48 63 c0             	movslq %eax,%rax
+     b7c:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+     b83:	00 00 00 
+     b86:	48 0f af c1          	imul   %rcx,%rax
+     b8a:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+     b8e:	48 01 c1             	add    %rax,%rcx
+     b91:	8b 01                	mov    (%rcx),%eax
+     b93:	83 f8 00             	cmp    $0x0,%eax
+     b96:	0f 8e 67 07 00 00    	jle    1303 <crefenq+0xbb7>
+ pa = (char*)pd +(int)(pz+iz)->deps;
+     b9c:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     b9f:	48 63 c0             	movslq %eax,%rax
+     ba2:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+     ba9:	00 00 00 
+     bac:	48 0f af c1          	imul   %rcx,%rax
+     bb0:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+     bb4:	48 01 c1             	add    %rax,%rcx
+     bb7:	48 83 c1 0c          	add    $0xc,%rcx
+     bbb:	8b 01                	mov    (%rcx),%eax
+     bbd:	48 63 c0             	movslq %eax,%rax
+     bc0:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+     bc4:	48 01 c1             	add    %rax,%rcx
+     bc7:	48 89 4d c8          	mov    %rcx,-0x38(%rbp)
+ (pz+iz)->memcell = pa;
+     bcb:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     bce:	48 63 c0             	movslq %eax,%rax
+     bd1:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+     bd8:	00 00 00 
+     bdb:	48 0f af c1          	imul   %rcx,%rax
+     bdf:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+     be3:	48 01 c1             	add    %rax,%rcx
+     be6:	48 83 c1 18          	add    $0x18,%rcx
+     bea:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+     bee:	48 89 01             	mov    %rax,(%rcx)
+if ( (pz+iz)->typ < 10)	{
+     bf1:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     bf4:	48 63 c0             	movslq %eax,%rax
+     bf7:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+     bfe:	00 00 00 
+     c01:	48 0f af c1          	imul   %rcx,%rax
+     c05:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+     c09:	48 01 c1             	add    %rax,%rcx
+     c0c:	48 83 c1 20          	add    $0x20,%rcx
+     c10:	8b 01                	mov    (%rcx),%eax
+     c12:	83 f8 0a             	cmp    $0xa,%eax
+     c15:	0f 8d 1c 02 00 00    	jge    e37 <crefenq+0x6eb>
+ (pz+iz)->wdg = gtk_label_new(NULL);
+     c1b:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     c1e:	48 63 c0             	movslq %eax,%rax
+     c21:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+     c28:	00 00 00 
+     c2b:	48 0f af c1          	imul   %rcx,%rax
+     c2f:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+     c33:	48 01 c1             	add    %rax,%rcx
+     c36:	48 83 c1 10          	add    $0x10,%rcx
+     c3a:	48 89 8d d8 fe ff ff 	mov    %rcx,-0x128(%rbp)
+     c41:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+     c48:	00 00 00 
+     c4b:	48 89 c7             	mov    %rax,%rdi
+     c4e:	b8 00 00 00 00       	mov    $0x0,%eax
+     c53:	e8 fc ff ff ff       	callq  c54 <crefenq+0x508>
+     c58:	48 8b 8d d8 fe ff ff 	mov    -0x128(%rbp),%rcx
+     c5f:	48 89 01             	mov    %rax,(%rcx)
+ gtk_label_set_max_width_chars((GtkLabel*) (pz+iz)->wdg,(pz+iz)->laf); 
+     c62:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     c65:	48 63 c0             	movslq %eax,%rax
+     c68:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+     c6f:	00 00 00 
+     c72:	48 0f af c1          	imul   %rcx,%rax
+     c76:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+     c7a:	48 01 c1             	add    %rax,%rcx
+     c7d:	48 83 c1 10          	add    $0x10,%rcx
+     c81:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     c84:	48 63 c0             	movslq %eax,%rax
+     c87:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+     c8e:	00 00 00 
+     c91:	48 0f af c2          	imul   %rdx,%rax
+     c95:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+     c99:	48 01 c2             	add    %rax,%rdx
+     c9c:	48 83 c2 24          	add    $0x24,%rdx
+     ca0:	48 89 8d d0 fe ff ff 	mov    %rcx,-0x130(%rbp)
+     ca7:	48 89 95 c8 fe ff ff 	mov    %rdx,-0x138(%rbp)
+     cae:	48 8b 85 c8 fe ff ff 	mov    -0x138(%rbp),%rax
+     cb5:	8b 00                	mov    (%rax),%eax
+     cb7:	48 89 c6             	mov    %rax,%rsi
+     cba:	48 8b 85 d0 fe ff ff 	mov    -0x130(%rbp),%rax
+     cc1:	48 8b 00             	mov    (%rax),%rax
+     cc4:	48 89 c7             	mov    %rax,%rdi
+     cc7:	b8 00 00 00 00       	mov    $0x0,%eax
+     ccc:	e8 fc ff ff ff       	callq  ccd <crefenq+0x581>
+ gtk_fixed_put(GTK_FIXED(fixg), (pz+iz)->wdg, (pz+iz)->cox, (pz+iz)->lyg); 
+     cd1:	b8 00 00 00 00       	mov    $0x0,%eax
+     cd6:	e8 fc ff ff ff       	callq  cd7 <crefenq+0x58b>
+     cdb:	48 89 85 c0 fe ff ff 	mov    %rax,-0x140(%rbp)
+     ce2:	48 8b 85 c0 fe ff ff 	mov    -0x140(%rbp),%rax
+     ce9:	48 89 c6             	mov    %rax,%rsi
+     cec:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+     cf0:	48 89 c7             	mov    %rax,%rdi
+     cf3:	b8 00 00 00 00       	mov    $0x0,%eax
+     cf8:	e8 fc ff ff ff       	callq  cf9 <crefenq+0x5ad>
+     cfd:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+     d00:	48 63 c9             	movslq %ecx,%rcx
+     d03:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+     d0a:	00 00 00 
+     d0d:	48 0f af ca          	imul   %rdx,%rcx
+     d11:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+     d15:	48 01 ca             	add    %rcx,%rdx
+     d18:	48 83 c2 10          	add    $0x10,%rdx
+     d1c:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+     d1f:	48 63 c9             	movslq %ecx,%rcx
+     d22:	48 89 85 b8 fe ff ff 	mov    %rax,-0x148(%rbp)
+     d29:	48 b8 38 00 00 00 00 	movabs $0x38,%rax
+     d30:	00 00 00 
+     d33:	48 0f af c8          	imul   %rax,%rcx
+     d37:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+     d3b:	48 01 c8             	add    %rcx,%rax
+     d3e:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+     d41:	48 63 c9             	movslq %ecx,%rcx
+     d44:	48 89 95 b0 fe ff ff 	mov    %rdx,-0x150(%rbp)
+     d4b:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+     d52:	00 00 00 
+     d55:	48 0f af ca          	imul   %rdx,%rcx
+     d59:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+     d5d:	48 01 ca             	add    %rcx,%rdx
+     d60:	48 83 c2 04          	add    $0x4,%rdx
+     d64:	48 89 85 a8 fe ff ff 	mov    %rax,-0x158(%rbp)
+     d6b:	48 89 95 a0 fe ff ff 	mov    %rdx,-0x160(%rbp)
+     d72:	48 8b 85 a0 fe ff ff 	mov    -0x160(%rbp),%rax
+     d79:	8b 00                	mov    (%rax),%eax
+     d7b:	49 89 c3             	mov    %rax,%r11
+     d7e:	48 8b 85 a8 fe ff ff 	mov    -0x158(%rbp),%rax
+     d85:	8b 00                	mov    (%rax),%eax
+     d87:	49 89 c2             	mov    %rax,%r10
+     d8a:	48 8b 85 b0 fe ff ff 	mov    -0x150(%rbp),%rax
+     d91:	48 8b 00             	mov    (%rax),%rax
+     d94:	48 89 c6             	mov    %rax,%rsi
+     d97:	48 8b 85 b8 fe ff ff 	mov    -0x148(%rbp),%rax
+     d9e:	48 89 c7             	mov    %rax,%rdi
+     da1:	4c 89 d2             	mov    %r10,%rdx
+     da4:	4c 89 d9             	mov    %r11,%rcx
+     da7:	b8 00 00 00 00       	mov    $0x0,%eax
+     dac:	e8 fc ff ff ff       	callq  dad <crefenq+0x661>
+ gtk_widget_set_size_request((pz+iz)->wdg, (pz+iz)->laf * DIMC, 25);
+     db1:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     db4:	48 63 c0             	movslq %eax,%rax
+     db7:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+     dbe:	00 00 00 
+     dc1:	48 0f af c1          	imul   %rcx,%rax
+     dc5:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+     dc9:	48 01 c1             	add    %rax,%rcx
+     dcc:	48 83 c1 10          	add    $0x10,%rcx
+     dd0:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     dd3:	48 63 c0             	movslq %eax,%rax
+     dd6:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+     ddd:	00 00 00 
+     de0:	48 0f af c2          	imul   %rdx,%rax
+     de4:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+     de8:	48 01 c2             	add    %rax,%rdx
+     deb:	48 83 c2 24          	add    $0x24,%rdx
+     def:	8b 02                	mov    (%rdx),%eax
+     df1:	ba 07 00 00 00       	mov    $0x7,%edx
+     df6:	0f af c2             	imul   %edx,%eax
+     df9:	48 89 8d 98 fe ff ff 	mov    %rcx,-0x168(%rbp)
+     e00:	48 89 85 90 fe ff ff 	mov    %rax,-0x170(%rbp)
+     e07:	b8 19 00 00 00       	mov    $0x19,%eax
+     e0c:	49 89 c2             	mov    %rax,%r10
+     e0f:	8b 85 90 fe ff ff    	mov    -0x170(%rbp),%eax
+     e15:	48 89 c6             	mov    %rax,%rsi
+     e18:	48 8b 85 98 fe ff ff 	mov    -0x168(%rbp),%rax
+     e1f:	48 8b 00             	mov    (%rax),%rax
+     e22:	48 89 c7             	mov    %rax,%rdi
+     e25:	4c 89 d2             	mov    %r10,%rdx
+     e28:	b8 00 00 00 00       	mov    $0x0,%eax
+     e2d:	e8 fc ff ff ff       	callq  e2e <crefenq+0x6e2>
+     e32:	e9 be 04 00 00       	jmpq   12f5 <crefenq+0xba9>
+			}
+	// DEFMAN definition  faite dans fbouton
+else if ( (pz+iz)->typ == DEFMAN)	{ ++iz;	continue; }
+     e37:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     e3a:	48 63 c0             	movslq %eax,%rax
+     e3d:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+     e44:	00 00 00 
+     e47:	48 0f af c1          	imul   %rcx,%rax
+     e4b:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+     e4f:	48 01 c1             	add    %rax,%rcx
+     e52:	48 83 c1 20          	add    $0x20,%rcx
+     e56:	8b 01                	mov    (%rcx),%eax
+     e58:	83 f8 12             	cmp    $0x12,%eax
+     e5b:	0f 85 13 00 00 00    	jne    e74 <crefenq+0x728>
+     e61:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     e64:	83 c0 01             	add    $0x1,%eax
+     e67:	89 45 ec             	mov    %eax,-0x14(%rbp)
+     e6a:	e9 07 fd ff ff       	jmpq   b76 <crefenq+0x42a>
+     e6f:	e9 81 04 00 00       	jmpq   12f5 <crefenq+0xba9>
+else 	{
+	// saisie sur 1 car force a 2
+ if ((pz+iz)->laf == 1)  (pz+iz)->wdg = gtk_entry_new_with_max_length(2);  
+     e74:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     e77:	48 63 c0             	movslq %eax,%rax
+     e7a:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+     e81:	00 00 00 
+     e84:	48 0f af c1          	imul   %rcx,%rax
+     e88:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+     e8c:	48 01 c1             	add    %rax,%rcx
+     e8f:	48 83 c1 24          	add    $0x24,%rcx
+     e93:	8b 01                	mov    (%rcx),%eax
+     e95:	83 f8 01             	cmp    $0x1,%eax
+     e98:	0f 85 47 00 00 00    	jne    ee5 <crefenq+0x799>
+     e9e:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     ea1:	48 63 c0             	movslq %eax,%rax
+     ea4:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+     eab:	00 00 00 
+     eae:	48 0f af c1          	imul   %rcx,%rax
+     eb2:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+     eb6:	48 01 c1             	add    %rax,%rcx
+     eb9:	48 83 c1 10          	add    $0x10,%rcx
+     ebd:	48 89 8d 88 fe ff ff 	mov    %rcx,-0x178(%rbp)
+     ec4:	b8 02 00 00 00       	mov    $0x2,%eax
+     ec9:	48 89 c7             	mov    %rax,%rdi
+     ecc:	b8 00 00 00 00       	mov    $0x0,%eax
+     ed1:	e8 fc ff ff ff       	callq  ed2 <crefenq+0x786>
+     ed6:	48 8b 8d 88 fe ff ff 	mov    -0x178(%rbp),%rcx
+     edd:	48 89 01             	mov    %rax,(%rcx)
+     ee0:	e9 6c 00 00 00       	jmpq   f51 <crefenq+0x805>
+ else	  (pz+iz)->wdg =  gtk_entry_new_with_max_length((pz+iz)->laf); 
+     ee5:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     ee8:	48 63 c0             	movslq %eax,%rax
+     eeb:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+     ef2:	00 00 00 
+     ef5:	48 0f af c1          	imul   %rcx,%rax
+     ef9:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+     efd:	48 01 c1             	add    %rax,%rcx
+     f00:	48 83 c1 10          	add    $0x10,%rcx
+     f04:	8b 45 ec             	mov    -0x14(%rbp),%eax
+     f07:	48 63 c0             	movslq %eax,%rax
+     f0a:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+     f11:	00 00 00 
+     f14:	48 0f af c2          	imul   %rdx,%rax
+     f18:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+     f1c:	48 01 c2             	add    %rax,%rdx
+     f1f:	48 83 c2 24          	add    $0x24,%rdx
+     f23:	48 89 8d 80 fe ff ff 	mov    %rcx,-0x180(%rbp)
+     f2a:	48 89 95 78 fe ff ff 	mov    %rdx,-0x188(%rbp)
+     f31:	48 8b 85 78 fe ff ff 	mov    -0x188(%rbp),%rax
+     f38:	8b 00                	mov    (%rax),%eax
+     f3a:	48 89 c7             	mov    %rax,%rdi
+     f3d:	b8 00 00 00 00       	mov    $0x0,%eax
+     f42:	e8 fc ff ff ff       	callq  f43 <crefenq+0x7f7>
+     f47:	48 8b 8d 80 fe ff ff 	mov    -0x180(%rbp),%rcx
+     f4e:	48 89 01             	mov    %rax,(%rcx)
+ gtk_fixed_put(GTK_FIXED(fixg), (pz+iz)->wdg, (pz+iz)->cox, (pz+iz)->lyg); 
+     f51:	b8 00 00 00 00       	mov    $0x0,%eax
+     f56:	e8 fc ff ff ff       	callq  f57 <crefenq+0x80b>
+     f5b:	48 89 85 70 fe ff ff 	mov    %rax,-0x190(%rbp)
+     f62:	48 8b 85 70 fe ff ff 	mov    -0x190(%rbp),%rax
+     f69:	48 89 c6             	mov    %rax,%rsi
+     f6c:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+     f70:	48 89 c7             	mov    %rax,%rdi
+     f73:	b8 00 00 00 00       	mov    $0x0,%eax
+     f78:	e8 fc ff ff ff       	callq  f79 <crefenq+0x82d>
+     f7d:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+     f80:	48 63 c9             	movslq %ecx,%rcx
+     f83:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+     f8a:	00 00 00 
+     f8d:	48 0f af ca          	imul   %rdx,%rcx
+     f91:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+     f95:	48 01 ca             	add    %rcx,%rdx
+     f98:	48 83 c2 10          	add    $0x10,%rdx
+     f9c:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+     f9f:	48 63 c9             	movslq %ecx,%rcx
+     fa2:	48 89 85 68 fe ff ff 	mov    %rax,-0x198(%rbp)
+     fa9:	48 b8 38 00 00 00 00 	movabs $0x38,%rax
+     fb0:	00 00 00 
+     fb3:	48 0f af c8          	imul   %rax,%rcx
+     fb7:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
+     fbb:	48 01 c8             	add    %rcx,%rax
+     fbe:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+     fc1:	48 63 c9             	movslq %ecx,%rcx
+     fc4:	48 89 95 60 fe ff ff 	mov    %rdx,-0x1a0(%rbp)
+     fcb:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+     fd2:	00 00 00 
+     fd5:	48 0f af ca          	imul   %rdx,%rcx
+     fd9:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+     fdd:	48 01 ca             	add    %rcx,%rdx
+     fe0:	48 83 c2 04          	add    $0x4,%rdx
+     fe4:	48 89 85 58 fe ff ff 	mov    %rax,-0x1a8(%rbp)
+     feb:	48 89 95 50 fe ff ff 	mov    %rdx,-0x1b0(%rbp)
+     ff2:	48 8b 85 50 fe ff ff 	mov    -0x1b0(%rbp),%rax
+     ff9:	8b 00                	mov    (%rax),%eax
+     ffb:	49 89 c3             	mov    %rax,%r11
+     ffe:	48 8b 85 58 fe ff ff 	mov    -0x1a8(%rbp),%rax
+    1005:	8b 00                	mov    (%rax),%eax
+    1007:	49 89 c2             	mov    %rax,%r10
+    100a:	48 8b 85 60 fe ff ff 	mov    -0x1a0(%rbp),%rax
+    1011:	48 8b 00             	mov    (%rax),%rax
+    1014:	48 89 c6             	mov    %rax,%rsi
+    1017:	48 8b 85 68 fe ff ff 	mov    -0x198(%rbp),%rax
+    101e:	48 89 c7             	mov    %rax,%rdi
+    1021:	4c 89 d2             	mov    %r10,%rdx
+    1024:	4c 89 d9             	mov    %r11,%rcx
+    1027:	b8 00 00 00 00       	mov    $0x0,%eax
+    102c:	e8 fc ff ff ff       	callq  102d <crefenq+0x8e1>
+ gtk_widget_set_size_request((pz+iz)->wdg, (pz+iz)->laf * DIMC + 15, 25);
+    1031:	8b 45 ec             	mov    -0x14(%rbp),%eax
+    1034:	48 63 c0             	movslq %eax,%rax
+    1037:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    103e:	00 00 00 
+    1041:	48 0f af c1          	imul   %rcx,%rax
+    1045:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+    1049:	48 01 c1             	add    %rax,%rcx
+    104c:	48 83 c1 10          	add    $0x10,%rcx
+    1050:	8b 45 ec             	mov    -0x14(%rbp),%eax
+    1053:	48 63 c0             	movslq %eax,%rax
+    1056:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    105d:	00 00 00 
+    1060:	48 0f af c2          	imul   %rdx,%rax
+    1064:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+    1068:	48 01 c2             	add    %rax,%rdx
+    106b:	48 83 c2 24          	add    $0x24,%rdx
+    106f:	8b 02                	mov    (%rdx),%eax
+    1071:	ba 07 00 00 00       	mov    $0x7,%edx
+    1076:	0f af c2             	imul   %edx,%eax
+    1079:	83 c0 0f             	add    $0xf,%eax
+    107c:	48 89 8d 48 fe ff ff 	mov    %rcx,-0x1b8(%rbp)
+    1083:	48 89 85 40 fe ff ff 	mov    %rax,-0x1c0(%rbp)
+    108a:	b8 19 00 00 00       	mov    $0x19,%eax
+    108f:	49 89 c2             	mov    %rax,%r10
+    1092:	8b 85 40 fe ff ff    	mov    -0x1c0(%rbp),%eax
+    1098:	48 89 c6             	mov    %rax,%rsi
+    109b:	48 8b 85 48 fe ff ff 	mov    -0x1b8(%rbp),%rax
+    10a2:	48 8b 00             	mov    (%rax),%rax
+    10a5:	48 89 c7             	mov    %rax,%rdi
+    10a8:	4c 89 d2             	mov    %r10,%rdx
+    10ab:	b8 00 00 00 00       	mov    $0x0,%eax
+    10b0:	e8 fc ff ff ff       	callq  10b1 <crefenq+0x965>
+
+ g_signal_connect(G_OBJECT((pz+iz)->wdg), "activate", G_CALLBACK (activ_fenq),(void*) (pz+iz));
+    10b5:	8b 45 ec             	mov    -0x14(%rbp),%eax
+    10b8:	48 63 c0             	movslq %eax,%rax
+    10bb:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    10c2:	00 00 00 
+    10c5:	48 0f af c1          	imul   %rcx,%rax
+    10c9:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+    10cd:	48 01 c1             	add    %rax,%rcx
+    10d0:	48 83 c1 10          	add    $0x10,%rcx
+    10d4:	48 89 8d 38 fe ff ff 	mov    %rcx,-0x1c8(%rbp)
+    10db:	48 b8 50 00 00 00 00 	movabs $0x50,%rax
+    10e2:	00 00 00 
+    10e5:	48 89 c6             	mov    %rax,%rsi
+    10e8:	48 8b 85 38 fe ff ff 	mov    -0x1c8(%rbp),%rax
+    10ef:	48 8b 00             	mov    (%rax),%rax
+    10f2:	48 89 c7             	mov    %rax,%rdi
+    10f5:	b8 00 00 00 00       	mov    $0x0,%eax
+    10fa:	e8 fc ff ff ff       	callq  10fb <crefenq+0x9af>
+    10ff:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+    1102:	48 63 c9             	movslq %ecx,%rcx
+    1105:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    110c:	00 00 00 
+    110f:	48 0f af ca          	imul   %rdx,%rcx
+    1113:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+    1117:	48 01 ca             	add    %rcx,%rdx
+    111a:	48 89 85 30 fe ff ff 	mov    %rax,-0x1d0(%rbp)
+    1121:	48 89 95 28 fe ff ff 	mov    %rdx,-0x1d8(%rbp)
+    1128:	b8 00 00 00 00       	mov    $0x0,%eax
+    112d:	49 89 c1             	mov    %rax,%r9
+    1130:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+    1137:	00 00 00 
+    113a:	49 89 c0             	mov    %rax,%r8
+    113d:	48 8b 85 28 fe ff ff 	mov    -0x1d8(%rbp),%rax
+    1144:	49 89 c3             	mov    %rax,%r11
+    1147:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 114e <crefenq+0xa02>
+    114e:	49 89 c2             	mov    %rax,%r10
+    1151:	48 8d 05 fc ff ff ff 	lea    -0x4(%rip),%rax        # 1154 <crefenq+0xa08>
+    1158:	48 89 c6             	mov    %rax,%rsi
+    115b:	48 8b 85 30 fe ff ff 	mov    -0x1d0(%rbp),%rax
+    1162:	48 89 c7             	mov    %rax,%rdi
+    1165:	4c 89 d2             	mov    %r10,%rdx
+    1168:	4c 89 d9             	mov    %r11,%rcx
+    116b:	b8 00 00 00 00       	mov    $0x0,%eax
+    1170:	e8 fc ff ff ff       	callq  1171 <crefenq+0xa25>
+ g_signal_connect(G_OBJECT((pz+iz)->wdg), "changed", G_CALLBACK (chang_fenq),(void*) (pz+iz));
+    1175:	8b 45 ec             	mov    -0x14(%rbp),%eax
+    1178:	48 63 c0             	movslq %eax,%rax
+    117b:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    1182:	00 00 00 
+    1185:	48 0f af c1          	imul   %rcx,%rax
+    1189:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+    118d:	48 01 c1             	add    %rax,%rcx
+    1190:	48 83 c1 10          	add    $0x10,%rcx
+    1194:	48 89 8d 20 fe ff ff 	mov    %rcx,-0x1e0(%rbp)
+    119b:	48 b8 50 00 00 00 00 	movabs $0x50,%rax
+    11a2:	00 00 00 
+    11a5:	48 89 c6             	mov    %rax,%rsi
+    11a8:	48 8b 85 20 fe ff ff 	mov    -0x1e0(%rbp),%rax
+    11af:	48 8b 00             	mov    (%rax),%rax
+    11b2:	48 89 c7             	mov    %rax,%rdi
+    11b5:	b8 00 00 00 00       	mov    $0x0,%eax
+    11ba:	e8 fc ff ff ff       	callq  11bb <crefenq+0xa6f>
+    11bf:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+    11c2:	48 63 c9             	movslq %ecx,%rcx
+    11c5:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    11cc:	00 00 00 
+    11cf:	48 0f af ca          	imul   %rdx,%rcx
+    11d3:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+    11d7:	48 01 ca             	add    %rcx,%rdx
+    11da:	48 89 85 18 fe ff ff 	mov    %rax,-0x1e8(%rbp)
+    11e1:	48 89 95 10 fe ff ff 	mov    %rdx,-0x1f0(%rbp)
+    11e8:	b8 00 00 00 00       	mov    $0x0,%eax
+    11ed:	49 89 c1             	mov    %rax,%r9
+    11f0:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+    11f7:	00 00 00 
+    11fa:	49 89 c0             	mov    %rax,%r8
+    11fd:	48 8b 85 10 fe ff ff 	mov    -0x1f0(%rbp),%rax
+    1204:	49 89 c3             	mov    %rax,%r11
+    1207:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 120e <crefenq+0xac2>
+    120e:	49 89 c2             	mov    %rax,%r10
+    1211:	48 8d 05 fc ff ff ff 	lea    -0x4(%rip),%rax        # 1214 <crefenq+0xac8>
+    1218:	48 89 c6             	mov    %rax,%rsi
+    121b:	48 8b 85 18 fe ff ff 	mov    -0x1e8(%rbp),%rax
+    1222:	48 89 c7             	mov    %rax,%rdi
+    1225:	4c 89 d2             	mov    %r10,%rdx
+    1228:	4c 89 d9             	mov    %r11,%rcx
+    122b:	b8 00 00 00 00       	mov    $0x0,%eax
+    1230:	e8 fc ff ff ff       	callq  1231 <crefenq+0xae5>
+ g_signal_connect_after(G_OBJECT((pz+iz)->wdg), "focus-out-event", G_CALLBACK (focout_fenq),(void*) (pz+iz));
+    1235:	8b 45 ec             	mov    -0x14(%rbp),%eax
+    1238:	48 63 c0             	movslq %eax,%rax
+    123b:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    1242:	00 00 00 
+    1245:	48 0f af c1          	imul   %rcx,%rax
+    1249:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
+    124d:	48 01 c1             	add    %rax,%rcx
+    1250:	48 83 c1 10          	add    $0x10,%rcx
+    1254:	48 89 8d 08 fe ff ff 	mov    %rcx,-0x1f8(%rbp)
+    125b:	48 b8 50 00 00 00 00 	movabs $0x50,%rax
+    1262:	00 00 00 
+    1265:	48 89 c6             	mov    %rax,%rsi
+    1268:	48 8b 85 08 fe ff ff 	mov    -0x1f8(%rbp),%rax
+    126f:	48 8b 00             	mov    (%rax),%rax
+    1272:	48 89 c7             	mov    %rax,%rdi
+    1275:	b8 00 00 00 00       	mov    $0x0,%eax
+    127a:	e8 fc ff ff ff       	callq  127b <crefenq+0xb2f>
+    127f:	8b 4d ec             	mov    -0x14(%rbp),%ecx
+    1282:	48 63 c9             	movslq %ecx,%rcx
+    1285:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    128c:	00 00 00 
+    128f:	48 0f af ca          	imul   %rdx,%rcx
+    1293:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
+    1297:	48 01 ca             	add    %rcx,%rdx
+    129a:	48 89 85 00 fe ff ff 	mov    %rax,-0x200(%rbp)
+    12a1:	48 89 95 f8 fd ff ff 	mov    %rdx,-0x208(%rbp)
+    12a8:	b8 01 00 00 00       	mov    $0x1,%eax
+    12ad:	49 89 c1             	mov    %rax,%r9
+    12b0:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+    12b7:	00 00 00 
+    12ba:	49 89 c0             	mov    %rax,%r8
+    12bd:	48 8b 85 f8 fd ff ff 	mov    -0x208(%rbp),%rax
+    12c4:	49 89 c3             	mov    %rax,%r11
+    12c7:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 12ce <crefenq+0xb82>
+    12ce:	49 89 c2             	mov    %rax,%r10
+    12d1:	48 8d 05 fc ff ff ff 	lea    -0x4(%rip),%rax        # 12d4 <crefenq+0xb88>
+    12d8:	48 89 c6             	mov    %rax,%rsi
+    12db:	48 8b 85 00 fe ff ff 	mov    -0x200(%rbp),%rax
+    12e2:	48 89 c7             	mov    %rax,%rdi
+    12e5:	4c 89 d2             	mov    %r10,%rdx
+    12e8:	4c 89 d9             	mov    %r11,%rcx
+    12eb:	b8 00 00 00 00       	mov    $0x0,%eax
+    12f0:	e8 fc ff ff ff       	callq  12f1 <crefenq+0xba5>
+	}
+ ++iz;
+    12f5:	8b 45 ec             	mov    -0x14(%rbp),%eax
+    12f8:	83 c0 01             	add    $0x1,%eax
+    12fb:	89 45 ec             	mov    %eax,-0x14(%rbp)
+    12fe:	e9 73 f8 ff ff       	jmpq   b76 <crefenq+0x42a>
+			}
+g_signal_connect_after(G_OBJECT(pf->win), "destroy", G_CALLBACK (quit_fenq), pf);
+    1303:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    1307:	48 89 85 f0 fd ff ff 	mov    %rax,-0x210(%rbp)
+    130e:	48 b8 50 00 00 00 00 	movabs $0x50,%rax
+    1315:	00 00 00 
+    1318:	48 89 c6             	mov    %rax,%rsi
+    131b:	48 8b 85 f0 fd ff ff 	mov    -0x210(%rbp),%rax
+    1322:	48 8b 00             	mov    (%rax),%rax
+    1325:	48 89 c7             	mov    %rax,%rdi
+    1328:	b8 00 00 00 00       	mov    $0x0,%eax
+    132d:	e8 fc ff ff ff       	callq  132e <crefenq+0xbe2>
+    1332:	48 89 85 e8 fd ff ff 	mov    %rax,-0x218(%rbp)
+    1339:	b8 01 00 00 00       	mov    $0x1,%eax
+    133e:	49 89 c1             	mov    %rax,%r9
+    1341:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+    1348:	00 00 00 
+    134b:	49 89 c0             	mov    %rax,%r8
+    134e:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    1352:	49 89 c3             	mov    %rax,%r11
+    1355:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 135c <crefenq+0xc10>
+    135c:	49 89 c2             	mov    %rax,%r10
+    135f:	48 8d 05 fc ff ff ff 	lea    -0x4(%rip),%rax        # 1362 <crefenq+0xc16>
+    1366:	48 89 c6             	mov    %rax,%rsi
+    1369:	48 8b 85 e8 fd ff ff 	mov    -0x218(%rbp),%rax
+    1370:	48 89 c7             	mov    %rax,%rdi
+    1373:	4c 89 d2             	mov    %r10,%rdx
+    1376:	4c 89 d9             	mov    %r11,%rcx
+    1379:	b8 00 00 00 00       	mov    $0x0,%eax
+    137e:	e8 fc ff ff ff       	callq  137f <crefenq+0xc33>
+    1383:	c9                   	leaveq 
+    1384:	c3                   	retq   
+
+0000000000001385 <creparfenq>:
+
+}
+
+void creparfenq(DEF_L_FQ *pli,DEF_S_FQ *pz,GtkWidget* fixg,void* pd)
+	// creation partie fenetre qq
+{
+    1385:	55                   	push   %rbp
+    1386:	48 89 e5             	mov    %rsp,%rbp
+    1389:	48 81 ec 50 01 00 00 	sub    $0x150,%rsp
+    1390:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
+    1394:	48 89 75 f0          	mov    %rsi,-0x10(%rbp)
+    1398:	48 89 55 e8          	mov    %rdx,-0x18(%rbp)
+    139c:	48 89 4d e0          	mov    %rcx,-0x20(%rbp)
+int  iz;
+char *pa;
+	// libelle
+iz=0;
+    13a0:	b8 00 00 00 00       	mov    $0x0,%eax
+    13a5:	89 45 dc             	mov    %eax,-0x24(%rbp)
+while ((pli+iz)->cox > 0)	{
+    13a8:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    13ab:	48 63 c0             	movslq %eax,%rax
+    13ae:	48 c1 e0 05          	shl    $0x5,%rax
+    13b2:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+    13b6:	48 01 c1             	add    %rax,%rcx
+    13b9:	8b 01                	mov    (%rcx),%eax
+    13bb:	83 f8 00             	cmp    $0x0,%eax
+    13be:	0f 8e ff 00 00 00    	jle    14c3 <creparfenq+0x13e>
+ (pli+iz)->wdgl =  gtk_label_new((pli+iz)->libel);
+    13c4:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    13c7:	48 63 c0             	movslq %eax,%rax
+    13ca:	48 c1 e0 05          	shl    $0x5,%rax
+    13ce:	48 8b 4d f8          	mov    -0x8(%rbp),%rcx
+    13d2:	48 01 c1             	add    %rax,%rcx
+    13d5:	48 83 c1 08          	add    $0x8,%rcx
+    13d9:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    13dc:	48 63 c0             	movslq %eax,%rax
+    13df:	48 c1 e0 05          	shl    $0x5,%rax
+    13e3:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+    13e7:	48 01 c2             	add    %rax,%rdx
+    13ea:	48 83 c2 18          	add    $0x18,%rdx
+    13ee:	48 89 4d c8          	mov    %rcx,-0x38(%rbp)
+    13f2:	48 89 55 c0          	mov    %rdx,-0x40(%rbp)
+    13f6:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
+    13fa:	48 8b 00             	mov    (%rax),%rax
+    13fd:	48 89 c7             	mov    %rax,%rdi
+    1400:	b8 00 00 00 00       	mov    $0x0,%eax
+    1405:	e8 fc ff ff ff       	callq  1406 <creparfenq+0x81>
+    140a:	48 8b 4d c8          	mov    -0x38(%rbp),%rcx
+    140e:	48 89 01             	mov    %rax,(%rcx)
+ gtk_fixed_put(GTK_FIXED(fixg), (pli+iz)->wdgl, (pli+iz)->cox, (pli+iz)->lyg); 
+    1411:	b8 00 00 00 00       	mov    $0x0,%eax
+    1416:	e8 fc ff ff ff       	callq  1417 <creparfenq+0x92>
+    141b:	48 89 45 b8          	mov    %rax,-0x48(%rbp)
+    141f:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
+    1423:	48 89 c6             	mov    %rax,%rsi
+    1426:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    142a:	48 89 c7             	mov    %rax,%rdi
+    142d:	b8 00 00 00 00       	mov    $0x0,%eax
+    1432:	e8 fc ff ff ff       	callq  1433 <creparfenq+0xae>
+    1437:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    143a:	48 63 c9             	movslq %ecx,%rcx
+    143d:	48 c1 e1 05          	shl    $0x5,%rcx
+    1441:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+    1445:	48 01 ca             	add    %rcx,%rdx
+    1448:	48 83 c2 08          	add    $0x8,%rdx
+    144c:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    144f:	48 63 c9             	movslq %ecx,%rcx
+    1452:	48 c1 e1 05          	shl    $0x5,%rcx
+    1456:	48 89 45 b0          	mov    %rax,-0x50(%rbp)
+    145a:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
+    145e:	48 01 c8             	add    %rcx,%rax
+    1461:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    1464:	48 63 c9             	movslq %ecx,%rcx
+    1467:	48 c1 e1 05          	shl    $0x5,%rcx
+    146b:	48 89 55 a8          	mov    %rdx,-0x58(%rbp)
+    146f:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
+    1473:	48 01 ca             	add    %rcx,%rdx
+    1476:	48 83 c2 04          	add    $0x4,%rdx
+    147a:	48 89 45 a0          	mov    %rax,-0x60(%rbp)
+    147e:	48 89 55 98          	mov    %rdx,-0x68(%rbp)
+    1482:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+    1486:	8b 00                	mov    (%rax),%eax
+    1488:	49 89 c3             	mov    %rax,%r11
+    148b:	48 8b 45 a0          	mov    -0x60(%rbp),%rax
+    148f:	8b 00                	mov    (%rax),%eax
+    1491:	49 89 c2             	mov    %rax,%r10
+    1494:	48 8b 45 a8          	mov    -0x58(%rbp),%rax
+    1498:	48 8b 00             	mov    (%rax),%rax
+    149b:	48 89 c6             	mov    %rax,%rsi
+    149e:	48 8b 45 b0          	mov    -0x50(%rbp),%rax
+    14a2:	48 89 c7             	mov    %rax,%rdi
+    14a5:	4c 89 d2             	mov    %r10,%rdx
+    14a8:	4c 89 d9             	mov    %r11,%rcx
+    14ab:	b8 00 00 00 00       	mov    $0x0,%eax
+    14b0:	e8 fc ff ff ff       	callq  14b1 <creparfenq+0x12c>
+ ++iz;
+    14b5:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    14b8:	83 c0 01             	add    $0x1,%eax
+    14bb:	89 45 dc             	mov    %eax,-0x24(%rbp)
+    14be:	e9 e5 fe ff ff       	jmpq   13a8 <creparfenq+0x23>
+				}
+	// entry saisie zone variable
+iz=0;
+    14c3:	b8 00 00 00 00       	mov    $0x0,%eax
+    14c8:	89 45 dc             	mov    %eax,-0x24(%rbp)
+while ((pz+iz)->cox > 0)	{
+    14cb:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    14ce:	48 63 c0             	movslq %eax,%rax
+    14d1:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    14d8:	00 00 00 
+    14db:	48 0f af c1          	imul   %rcx,%rax
+    14df:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    14e3:	48 01 c1             	add    %rax,%rcx
+    14e6:	8b 01                	mov    (%rcx),%eax
+    14e8:	83 f8 00             	cmp    $0x0,%eax
+    14eb:	0f 8e 55 07 00 00    	jle    1c46 <creparfenq+0x8c1>
+ pa = (char*)pd +(int)(pz+iz)->deps;
+    14f1:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    14f4:	48 63 c0             	movslq %eax,%rax
+    14f7:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    14fe:	00 00 00 
+    1501:	48 0f af c1          	imul   %rcx,%rax
+    1505:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    1509:	48 01 c1             	add    %rax,%rcx
+    150c:	48 83 c1 0c          	add    $0xc,%rcx
+    1510:	8b 01                	mov    (%rcx),%eax
+    1512:	48 63 c0             	movslq %eax,%rax
+    1515:	48 8b 4d e0          	mov    -0x20(%rbp),%rcx
+    1519:	48 01 c1             	add    %rax,%rcx
+    151c:	48 89 4d d0          	mov    %rcx,-0x30(%rbp)
+ (pz+iz)->memcell = pa;
+    1520:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    1523:	48 63 c0             	movslq %eax,%rax
+    1526:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    152d:	00 00 00 
+    1530:	48 0f af c1          	imul   %rcx,%rax
+    1534:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    1538:	48 01 c1             	add    %rax,%rcx
+    153b:	48 83 c1 18          	add    $0x18,%rcx
+    153f:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
+    1543:	48 89 01             	mov    %rax,(%rcx)
+if ( (pz+iz)->typ < 10)	{
+    1546:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    1549:	48 63 c0             	movslq %eax,%rax
+    154c:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    1553:	00 00 00 
+    1556:	48 0f af c1          	imul   %rcx,%rax
+    155a:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    155e:	48 01 c1             	add    %rax,%rcx
+    1561:	48 83 c1 20          	add    $0x20,%rcx
+    1565:	8b 01                	mov    (%rcx),%eax
+    1567:	83 f8 0a             	cmp    $0xa,%eax
+    156a:	0f 8d 0a 02 00 00    	jge    177a <creparfenq+0x3f5>
+ (pz+iz)->wdg = gtk_label_new(NULL);
+    1570:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    1573:	48 63 c0             	movslq %eax,%rax
+    1576:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    157d:	00 00 00 
+    1580:	48 0f af c1          	imul   %rcx,%rax
+    1584:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    1588:	48 01 c1             	add    %rax,%rcx
+    158b:	48 83 c1 10          	add    $0x10,%rcx
+    158f:	48 89 4d 90          	mov    %rcx,-0x70(%rbp)
+    1593:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+    159a:	00 00 00 
+    159d:	48 89 c7             	mov    %rax,%rdi
+    15a0:	b8 00 00 00 00       	mov    $0x0,%eax
+    15a5:	e8 fc ff ff ff       	callq  15a6 <creparfenq+0x221>
+    15aa:	48 8b 4d 90          	mov    -0x70(%rbp),%rcx
+    15ae:	48 89 01             	mov    %rax,(%rcx)
+ gtk_label_set_max_width_chars((GtkLabel*) (pz+iz)->wdg,(pz+iz)->laf); 
+    15b1:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    15b4:	48 63 c0             	movslq %eax,%rax
+    15b7:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    15be:	00 00 00 
+    15c1:	48 0f af c1          	imul   %rcx,%rax
+    15c5:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    15c9:	48 01 c1             	add    %rax,%rcx
+    15cc:	48 83 c1 10          	add    $0x10,%rcx
+    15d0:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    15d3:	48 63 c0             	movslq %eax,%rax
+    15d6:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    15dd:	00 00 00 
+    15e0:	48 0f af c2          	imul   %rdx,%rax
+    15e4:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+    15e8:	48 01 c2             	add    %rax,%rdx
+    15eb:	48 83 c2 24          	add    $0x24,%rdx
+    15ef:	48 89 4d 88          	mov    %rcx,-0x78(%rbp)
+    15f3:	48 89 55 80          	mov    %rdx,-0x80(%rbp)
+    15f7:	48 8b 45 80          	mov    -0x80(%rbp),%rax
+    15fb:	8b 00                	mov    (%rax),%eax
+    15fd:	48 89 c6             	mov    %rax,%rsi
+    1600:	48 8b 45 88          	mov    -0x78(%rbp),%rax
+    1604:	48 8b 00             	mov    (%rax),%rax
+    1607:	48 89 c7             	mov    %rax,%rdi
+    160a:	b8 00 00 00 00       	mov    $0x0,%eax
+    160f:	e8 fc ff ff ff       	callq  1610 <creparfenq+0x28b>
+ gtk_fixed_put(GTK_FIXED(fixg), (pz+iz)->wdg, (pz+iz)->cox, (pz+iz)->lyg); 
+    1614:	b8 00 00 00 00       	mov    $0x0,%eax
+    1619:	e8 fc ff ff ff       	callq  161a <creparfenq+0x295>
+    161e:	48 89 85 78 ff ff ff 	mov    %rax,-0x88(%rbp)
+    1625:	48 8b 85 78 ff ff ff 	mov    -0x88(%rbp),%rax
+    162c:	48 89 c6             	mov    %rax,%rsi
+    162f:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    1633:	48 89 c7             	mov    %rax,%rdi
+    1636:	b8 00 00 00 00       	mov    $0x0,%eax
+    163b:	e8 fc ff ff ff       	callq  163c <creparfenq+0x2b7>
+    1640:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    1643:	48 63 c9             	movslq %ecx,%rcx
+    1646:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    164d:	00 00 00 
+    1650:	48 0f af ca          	imul   %rdx,%rcx
+    1654:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+    1658:	48 01 ca             	add    %rcx,%rdx
+    165b:	48 83 c2 10          	add    $0x10,%rdx
+    165f:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    1662:	48 63 c9             	movslq %ecx,%rcx
+    1665:	48 89 85 70 ff ff ff 	mov    %rax,-0x90(%rbp)
+    166c:	48 b8 38 00 00 00 00 	movabs $0x38,%rax
+    1673:	00 00 00 
+    1676:	48 0f af c8          	imul   %rax,%rcx
+    167a:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+    167e:	48 01 c8             	add    %rcx,%rax
+    1681:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    1684:	48 63 c9             	movslq %ecx,%rcx
+    1687:	48 89 95 68 ff ff ff 	mov    %rdx,-0x98(%rbp)
+    168e:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    1695:	00 00 00 
+    1698:	48 0f af ca          	imul   %rdx,%rcx
+    169c:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+    16a0:	48 01 ca             	add    %rcx,%rdx
+    16a3:	48 83 c2 04          	add    $0x4,%rdx
+    16a7:	48 89 85 60 ff ff ff 	mov    %rax,-0xa0(%rbp)
+    16ae:	48 89 95 58 ff ff ff 	mov    %rdx,-0xa8(%rbp)
+    16b5:	48 8b 85 58 ff ff ff 	mov    -0xa8(%rbp),%rax
+    16bc:	8b 00                	mov    (%rax),%eax
+    16be:	49 89 c3             	mov    %rax,%r11
+    16c1:	48 8b 85 60 ff ff ff 	mov    -0xa0(%rbp),%rax
+    16c8:	8b 00                	mov    (%rax),%eax
+    16ca:	49 89 c2             	mov    %rax,%r10
+    16cd:	48 8b 85 68 ff ff ff 	mov    -0x98(%rbp),%rax
+    16d4:	48 8b 00             	mov    (%rax),%rax
+    16d7:	48 89 c6             	mov    %rax,%rsi
+    16da:	48 8b 85 70 ff ff ff 	mov    -0x90(%rbp),%rax
+    16e1:	48 89 c7             	mov    %rax,%rdi
+    16e4:	4c 89 d2             	mov    %r10,%rdx
+    16e7:	4c 89 d9             	mov    %r11,%rcx
+    16ea:	b8 00 00 00 00       	mov    $0x0,%eax
+    16ef:	e8 fc ff ff ff       	callq  16f0 <creparfenq+0x36b>
+ gtk_widget_set_size_request((pz+iz)->wdg, (pz+iz)->laf * DIMC, 25);
+    16f4:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    16f7:	48 63 c0             	movslq %eax,%rax
+    16fa:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    1701:	00 00 00 
+    1704:	48 0f af c1          	imul   %rcx,%rax
+    1708:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    170c:	48 01 c1             	add    %rax,%rcx
+    170f:	48 83 c1 10          	add    $0x10,%rcx
+    1713:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    1716:	48 63 c0             	movslq %eax,%rax
+    1719:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    1720:	00 00 00 
+    1723:	48 0f af c2          	imul   %rdx,%rax
+    1727:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+    172b:	48 01 c2             	add    %rax,%rdx
+    172e:	48 83 c2 24          	add    $0x24,%rdx
+    1732:	8b 02                	mov    (%rdx),%eax
+    1734:	ba 07 00 00 00       	mov    $0x7,%edx
+    1739:	0f af c2             	imul   %edx,%eax
+    173c:	48 89 8d 50 ff ff ff 	mov    %rcx,-0xb0(%rbp)
+    1743:	48 89 85 48 ff ff ff 	mov    %rax,-0xb8(%rbp)
+    174a:	b8 19 00 00 00       	mov    $0x19,%eax
+    174f:	49 89 c2             	mov    %rax,%r10
+    1752:	8b 85 48 ff ff ff    	mov    -0xb8(%rbp),%eax
+    1758:	48 89 c6             	mov    %rax,%rsi
+    175b:	48 8b 85 50 ff ff ff 	mov    -0xb0(%rbp),%rax
+    1762:	48 8b 00             	mov    (%rax),%rax
+    1765:	48 89 c7             	mov    %rax,%rdi
+    1768:	4c 89 d2             	mov    %r10,%rdx
+    176b:	b8 00 00 00 00       	mov    $0x0,%eax
+    1770:	e8 fc ff ff ff       	callq  1771 <creparfenq+0x3ec>
+    1775:	e9 be 04 00 00       	jmpq   1c38 <creparfenq+0x8b3>
+			}
+	// DEFMAN definition  faite dans fbouton
+else if ( (pz+iz)->typ == DEFMAN)	{ ++iz;	continue; }
+    177a:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    177d:	48 63 c0             	movslq %eax,%rax
+    1780:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    1787:	00 00 00 
+    178a:	48 0f af c1          	imul   %rcx,%rax
+    178e:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    1792:	48 01 c1             	add    %rax,%rcx
+    1795:	48 83 c1 20          	add    $0x20,%rcx
+    1799:	8b 01                	mov    (%rcx),%eax
+    179b:	83 f8 12             	cmp    $0x12,%eax
+    179e:	0f 85 13 00 00 00    	jne    17b7 <creparfenq+0x432>
+    17a4:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    17a7:	83 c0 01             	add    $0x1,%eax
+    17aa:	89 45 dc             	mov    %eax,-0x24(%rbp)
+    17ad:	e9 19 fd ff ff       	jmpq   14cb <creparfenq+0x146>
+    17b2:	e9 81 04 00 00       	jmpq   1c38 <creparfenq+0x8b3>
+else 	{
+	// saisie sur 1 car force a 2
+ if ((pz+iz)->laf == 1)  (pz+iz)->wdg = gtk_entry_new_with_max_length(2);  
+    17b7:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    17ba:	48 63 c0             	movslq %eax,%rax
+    17bd:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    17c4:	00 00 00 
+    17c7:	48 0f af c1          	imul   %rcx,%rax
+    17cb:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    17cf:	48 01 c1             	add    %rax,%rcx
+    17d2:	48 83 c1 24          	add    $0x24,%rcx
+    17d6:	8b 01                	mov    (%rcx),%eax
+    17d8:	83 f8 01             	cmp    $0x1,%eax
+    17db:	0f 85 47 00 00 00    	jne    1828 <creparfenq+0x4a3>
+    17e1:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    17e4:	48 63 c0             	movslq %eax,%rax
+    17e7:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    17ee:	00 00 00 
+    17f1:	48 0f af c1          	imul   %rcx,%rax
+    17f5:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    17f9:	48 01 c1             	add    %rax,%rcx
+    17fc:	48 83 c1 10          	add    $0x10,%rcx
+    1800:	48 89 8d 40 ff ff ff 	mov    %rcx,-0xc0(%rbp)
+    1807:	b8 02 00 00 00       	mov    $0x2,%eax
+    180c:	48 89 c7             	mov    %rax,%rdi
+    180f:	b8 00 00 00 00       	mov    $0x0,%eax
+    1814:	e8 fc ff ff ff       	callq  1815 <creparfenq+0x490>
+    1819:	48 8b 8d 40 ff ff ff 	mov    -0xc0(%rbp),%rcx
+    1820:	48 89 01             	mov    %rax,(%rcx)
+    1823:	e9 6c 00 00 00       	jmpq   1894 <creparfenq+0x50f>
+ else	  (pz+iz)->wdg =  gtk_entry_new_with_max_length((pz+iz)->laf); 
+    1828:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    182b:	48 63 c0             	movslq %eax,%rax
+    182e:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    1835:	00 00 00 
+    1838:	48 0f af c1          	imul   %rcx,%rax
+    183c:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    1840:	48 01 c1             	add    %rax,%rcx
+    1843:	48 83 c1 10          	add    $0x10,%rcx
+    1847:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    184a:	48 63 c0             	movslq %eax,%rax
+    184d:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    1854:	00 00 00 
+    1857:	48 0f af c2          	imul   %rdx,%rax
+    185b:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+    185f:	48 01 c2             	add    %rax,%rdx
+    1862:	48 83 c2 24          	add    $0x24,%rdx
+    1866:	48 89 8d 38 ff ff ff 	mov    %rcx,-0xc8(%rbp)
+    186d:	48 89 95 30 ff ff ff 	mov    %rdx,-0xd0(%rbp)
+    1874:	48 8b 85 30 ff ff ff 	mov    -0xd0(%rbp),%rax
+    187b:	8b 00                	mov    (%rax),%eax
+    187d:	48 89 c7             	mov    %rax,%rdi
+    1880:	b8 00 00 00 00       	mov    $0x0,%eax
+    1885:	e8 fc ff ff ff       	callq  1886 <creparfenq+0x501>
+    188a:	48 8b 8d 38 ff ff ff 	mov    -0xc8(%rbp),%rcx
+    1891:	48 89 01             	mov    %rax,(%rcx)
+ gtk_fixed_put(GTK_FIXED(fixg), (pz+iz)->wdg, (pz+iz)->cox, (pz+iz)->lyg); 
+    1894:	b8 00 00 00 00       	mov    $0x0,%eax
+    1899:	e8 fc ff ff ff       	callq  189a <creparfenq+0x515>
+    189e:	48 89 85 28 ff ff ff 	mov    %rax,-0xd8(%rbp)
+    18a5:	48 8b 85 28 ff ff ff 	mov    -0xd8(%rbp),%rax
+    18ac:	48 89 c6             	mov    %rax,%rsi
+    18af:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    18b3:	48 89 c7             	mov    %rax,%rdi
+    18b6:	b8 00 00 00 00       	mov    $0x0,%eax
+    18bb:	e8 fc ff ff ff       	callq  18bc <creparfenq+0x537>
+    18c0:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    18c3:	48 63 c9             	movslq %ecx,%rcx
+    18c6:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    18cd:	00 00 00 
+    18d0:	48 0f af ca          	imul   %rdx,%rcx
+    18d4:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+    18d8:	48 01 ca             	add    %rcx,%rdx
+    18db:	48 83 c2 10          	add    $0x10,%rdx
+    18df:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    18e2:	48 63 c9             	movslq %ecx,%rcx
+    18e5:	48 89 85 20 ff ff ff 	mov    %rax,-0xe0(%rbp)
+    18ec:	48 b8 38 00 00 00 00 	movabs $0x38,%rax
+    18f3:	00 00 00 
+    18f6:	48 0f af c8          	imul   %rax,%rcx
+    18fa:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
+    18fe:	48 01 c8             	add    %rcx,%rax
+    1901:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    1904:	48 63 c9             	movslq %ecx,%rcx
+    1907:	48 89 95 18 ff ff ff 	mov    %rdx,-0xe8(%rbp)
+    190e:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    1915:	00 00 00 
+    1918:	48 0f af ca          	imul   %rdx,%rcx
+    191c:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+    1920:	48 01 ca             	add    %rcx,%rdx
+    1923:	48 83 c2 04          	add    $0x4,%rdx
+    1927:	48 89 85 10 ff ff ff 	mov    %rax,-0xf0(%rbp)
+    192e:	48 89 95 08 ff ff ff 	mov    %rdx,-0xf8(%rbp)
+    1935:	48 8b 85 08 ff ff ff 	mov    -0xf8(%rbp),%rax
+    193c:	8b 00                	mov    (%rax),%eax
+    193e:	49 89 c3             	mov    %rax,%r11
+    1941:	48 8b 85 10 ff ff ff 	mov    -0xf0(%rbp),%rax
+    1948:	8b 00                	mov    (%rax),%eax
+    194a:	49 89 c2             	mov    %rax,%r10
+    194d:	48 8b 85 18 ff ff ff 	mov    -0xe8(%rbp),%rax
+    1954:	48 8b 00             	mov    (%rax),%rax
+    1957:	48 89 c6             	mov    %rax,%rsi
+    195a:	48 8b 85 20 ff ff ff 	mov    -0xe0(%rbp),%rax
+    1961:	48 89 c7             	mov    %rax,%rdi
+    1964:	4c 89 d2             	mov    %r10,%rdx
+    1967:	4c 89 d9             	mov    %r11,%rcx
+    196a:	b8 00 00 00 00       	mov    $0x0,%eax
+    196f:	e8 fc ff ff ff       	callq  1970 <creparfenq+0x5eb>
+ gtk_widget_set_size_request((pz+iz)->wdg, (pz+iz)->laf * DIMC + 15, 25);
+    1974:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    1977:	48 63 c0             	movslq %eax,%rax
+    197a:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    1981:	00 00 00 
+    1984:	48 0f af c1          	imul   %rcx,%rax
+    1988:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    198c:	48 01 c1             	add    %rax,%rcx
+    198f:	48 83 c1 10          	add    $0x10,%rcx
+    1993:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    1996:	48 63 c0             	movslq %eax,%rax
+    1999:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    19a0:	00 00 00 
+    19a3:	48 0f af c2          	imul   %rdx,%rax
+    19a7:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+    19ab:	48 01 c2             	add    %rax,%rdx
+    19ae:	48 83 c2 24          	add    $0x24,%rdx
+    19b2:	8b 02                	mov    (%rdx),%eax
+    19b4:	ba 07 00 00 00       	mov    $0x7,%edx
+    19b9:	0f af c2             	imul   %edx,%eax
+    19bc:	83 c0 0f             	add    $0xf,%eax
+    19bf:	48 89 8d 00 ff ff ff 	mov    %rcx,-0x100(%rbp)
+    19c6:	48 89 85 f8 fe ff ff 	mov    %rax,-0x108(%rbp)
+    19cd:	b8 19 00 00 00       	mov    $0x19,%eax
+    19d2:	49 89 c2             	mov    %rax,%r10
+    19d5:	8b 85 f8 fe ff ff    	mov    -0x108(%rbp),%eax
+    19db:	48 89 c6             	mov    %rax,%rsi
+    19de:	48 8b 85 00 ff ff ff 	mov    -0x100(%rbp),%rax
+    19e5:	48 8b 00             	mov    (%rax),%rax
+    19e8:	48 89 c7             	mov    %rax,%rdi
+    19eb:	4c 89 d2             	mov    %r10,%rdx
+    19ee:	b8 00 00 00 00       	mov    $0x0,%eax
+    19f3:	e8 fc ff ff ff       	callq  19f4 <creparfenq+0x66f>
+
+ g_signal_connect(G_OBJECT((pz+iz)->wdg), "activate", G_CALLBACK (activ_fenq),(void*) (pz+iz));
+    19f8:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    19fb:	48 63 c0             	movslq %eax,%rax
+    19fe:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    1a05:	00 00 00 
+    1a08:	48 0f af c1          	imul   %rcx,%rax
+    1a0c:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    1a10:	48 01 c1             	add    %rax,%rcx
+    1a13:	48 83 c1 10          	add    $0x10,%rcx
+    1a17:	48 89 8d f0 fe ff ff 	mov    %rcx,-0x110(%rbp)
+    1a1e:	48 b8 50 00 00 00 00 	movabs $0x50,%rax
+    1a25:	00 00 00 
+    1a28:	48 89 c6             	mov    %rax,%rsi
+    1a2b:	48 8b 85 f0 fe ff ff 	mov    -0x110(%rbp),%rax
+    1a32:	48 8b 00             	mov    (%rax),%rax
+    1a35:	48 89 c7             	mov    %rax,%rdi
+    1a38:	b8 00 00 00 00       	mov    $0x0,%eax
+    1a3d:	e8 fc ff ff ff       	callq  1a3e <creparfenq+0x6b9>
+    1a42:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    1a45:	48 63 c9             	movslq %ecx,%rcx
+    1a48:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    1a4f:	00 00 00 
+    1a52:	48 0f af ca          	imul   %rdx,%rcx
+    1a56:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+    1a5a:	48 01 ca             	add    %rcx,%rdx
+    1a5d:	48 89 85 e8 fe ff ff 	mov    %rax,-0x118(%rbp)
+    1a64:	48 89 95 e0 fe ff ff 	mov    %rdx,-0x120(%rbp)
+    1a6b:	b8 00 00 00 00       	mov    $0x0,%eax
+    1a70:	49 89 c1             	mov    %rax,%r9
+    1a73:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+    1a7a:	00 00 00 
+    1a7d:	49 89 c0             	mov    %rax,%r8
+    1a80:	48 8b 85 e0 fe ff ff 	mov    -0x120(%rbp),%rax
+    1a87:	49 89 c3             	mov    %rax,%r11
+    1a8a:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 1a91 <creparfenq+0x70c>
+    1a91:	49 89 c2             	mov    %rax,%r10
+    1a94:	48 8d 05 fc ff ff ff 	lea    -0x4(%rip),%rax        # 1a97 <creparfenq+0x712>
+    1a9b:	48 89 c6             	mov    %rax,%rsi
+    1a9e:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
+    1aa5:	48 89 c7             	mov    %rax,%rdi
+    1aa8:	4c 89 d2             	mov    %r10,%rdx
+    1aab:	4c 89 d9             	mov    %r11,%rcx
+    1aae:	b8 00 00 00 00       	mov    $0x0,%eax
+    1ab3:	e8 fc ff ff ff       	callq  1ab4 <creparfenq+0x72f>
+ g_signal_connect(G_OBJECT((pz+iz)->wdg), "changed", G_CALLBACK (chang_fenq),(void*) (pz+iz));
+    1ab8:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    1abb:	48 63 c0             	movslq %eax,%rax
+    1abe:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    1ac5:	00 00 00 
+    1ac8:	48 0f af c1          	imul   %rcx,%rax
+    1acc:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    1ad0:	48 01 c1             	add    %rax,%rcx
+    1ad3:	48 83 c1 10          	add    $0x10,%rcx
+    1ad7:	48 89 8d d8 fe ff ff 	mov    %rcx,-0x128(%rbp)
+    1ade:	48 b8 50 00 00 00 00 	movabs $0x50,%rax
+    1ae5:	00 00 00 
+    1ae8:	48 89 c6             	mov    %rax,%rsi
+    1aeb:	48 8b 85 d8 fe ff ff 	mov    -0x128(%rbp),%rax
+    1af2:	48 8b 00             	mov    (%rax),%rax
+    1af5:	48 89 c7             	mov    %rax,%rdi
+    1af8:	b8 00 00 00 00       	mov    $0x0,%eax
+    1afd:	e8 fc ff ff ff       	callq  1afe <creparfenq+0x779>
+    1b02:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    1b05:	48 63 c9             	movslq %ecx,%rcx
+    1b08:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    1b0f:	00 00 00 
+    1b12:	48 0f af ca          	imul   %rdx,%rcx
+    1b16:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+    1b1a:	48 01 ca             	add    %rcx,%rdx
+    1b1d:	48 89 85 d0 fe ff ff 	mov    %rax,-0x130(%rbp)
+    1b24:	48 89 95 c8 fe ff ff 	mov    %rdx,-0x138(%rbp)
+    1b2b:	b8 00 00 00 00       	mov    $0x0,%eax
+    1b30:	49 89 c1             	mov    %rax,%r9
+    1b33:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+    1b3a:	00 00 00 
+    1b3d:	49 89 c0             	mov    %rax,%r8
+    1b40:	48 8b 85 c8 fe ff ff 	mov    -0x138(%rbp),%rax
+    1b47:	49 89 c3             	mov    %rax,%r11
+    1b4a:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 1b51 <creparfenq+0x7cc>
+    1b51:	49 89 c2             	mov    %rax,%r10
+    1b54:	48 8d 05 fc ff ff ff 	lea    -0x4(%rip),%rax        # 1b57 <creparfenq+0x7d2>
+    1b5b:	48 89 c6             	mov    %rax,%rsi
+    1b5e:	48 8b 85 d0 fe ff ff 	mov    -0x130(%rbp),%rax
+    1b65:	48 89 c7             	mov    %rax,%rdi
+    1b68:	4c 89 d2             	mov    %r10,%rdx
+    1b6b:	4c 89 d9             	mov    %r11,%rcx
+    1b6e:	b8 00 00 00 00       	mov    $0x0,%eax
+    1b73:	e8 fc ff ff ff       	callq  1b74 <creparfenq+0x7ef>
+ g_signal_connect_after(G_OBJECT((pz+iz)->wdg), "focus-out-event", G_CALLBACK (focout_fenq),(void*) (pz+iz));
+    1b78:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    1b7b:	48 63 c0             	movslq %eax,%rax
+    1b7e:	48 b9 38 00 00 00 00 	movabs $0x38,%rcx
+    1b85:	00 00 00 
+    1b88:	48 0f af c1          	imul   %rcx,%rax
+    1b8c:	48 8b 4d f0          	mov    -0x10(%rbp),%rcx
+    1b90:	48 01 c1             	add    %rax,%rcx
+    1b93:	48 83 c1 10          	add    $0x10,%rcx
+    1b97:	48 89 8d c0 fe ff ff 	mov    %rcx,-0x140(%rbp)
+    1b9e:	48 b8 50 00 00 00 00 	movabs $0x50,%rax
+    1ba5:	00 00 00 
+    1ba8:	48 89 c6             	mov    %rax,%rsi
+    1bab:	48 8b 85 c0 fe ff ff 	mov    -0x140(%rbp),%rax
+    1bb2:	48 8b 00             	mov    (%rax),%rax
+    1bb5:	48 89 c7             	mov    %rax,%rdi
+    1bb8:	b8 00 00 00 00       	mov    $0x0,%eax
+    1bbd:	e8 fc ff ff ff       	callq  1bbe <creparfenq+0x839>
+    1bc2:	8b 4d dc             	mov    -0x24(%rbp),%ecx
+    1bc5:	48 63 c9             	movslq %ecx,%rcx
+    1bc8:	48 ba 38 00 00 00 00 	movabs $0x38,%rdx
+    1bcf:	00 00 00 
+    1bd2:	48 0f af ca          	imul   %rdx,%rcx
+    1bd6:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
+    1bda:	48 01 ca             	add    %rcx,%rdx
+    1bdd:	48 89 85 b8 fe ff ff 	mov    %rax,-0x148(%rbp)
+    1be4:	48 89 95 b0 fe ff ff 	mov    %rdx,-0x150(%rbp)
+    1beb:	b8 01 00 00 00       	mov    $0x1,%eax
+    1bf0:	49 89 c1             	mov    %rax,%r9
+    1bf3:	48 b8 00 00 00 00 00 	movabs $0x0,%rax
+    1bfa:	00 00 00 
+    1bfd:	49 89 c0             	mov    %rax,%r8
+    1c00:	48 8b 85 b0 fe ff ff 	mov    -0x150(%rbp),%rax
+    1c07:	49 89 c3             	mov    %rax,%r11
+    1c0a:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 1c11 <creparfenq+0x88c>
+    1c11:	49 89 c2             	mov    %rax,%r10
+    1c14:	48 8d 05 fc ff ff ff 	lea    -0x4(%rip),%rax        # 1c17 <creparfenq+0x892>
+    1c1b:	48 89 c6             	mov    %rax,%rsi
+    1c1e:	48 8b 85 b8 fe ff ff 	mov    -0x148(%rbp),%rax
+    1c25:	48 89 c7             	mov    %rax,%rdi
+    1c28:	4c 89 d2             	mov    %r10,%rdx
+    1c2b:	4c 89 d9             	mov    %r11,%rcx
+    1c2e:	b8 00 00 00 00       	mov    $0x0,%eax
+    1c33:	e8 fc ff ff ff       	callq  1c34 <creparfenq+0x8af>
+	}
+ ++iz;
+    1c38:	8b 45 dc             	mov    -0x24(%rbp),%eax
+    1c3b:	83 c0 01             	add    $0x1,%eax
+    1c3e:	89 45 dc             	mov    %eax,-0x24(%rbp)
+    1c41:	e9 85 f8 ff ff       	jmpq   14cb <creparfenq+0x146>
+    1c46:	c9                   	leaveq 
+    1c47:	c3                   	retq   
